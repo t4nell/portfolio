@@ -1,0 +1,35 @@
+:root {
+  // Colors
+  --color-background: #fffcf3;
+  --color-text: #000000;
+  --color-accent: #00bc8f;
+  --color-surface-dark: #000000;
+  --color-text-light: #ffffff;
+  --color-error: #e61c40;
+
+  // Typography
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Overpass', sans-serif;
+
+  // Layout
+  --content-width: 1440px;
+  --page-padding: 24px;
+
+  // Spacing
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 32px;
+  --spacing-lg: 64px;
+
+  // UI
+  --border-width: 2px;
+  --transition: 180ms ease;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --page-padding: 16px;
+    --spacing-lg: 48px;
+    --spacing-xl: 64px;
+  }
+}
