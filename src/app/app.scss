@@ -1,0 +1,9 @@
+.hero {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+}
+
+.hero__content {
+	flex: 1;
+}
