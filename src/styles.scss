@@ -4,10 +4,18 @@
 
 
 body {
+	display: flex;
+	justify-content: center;
 	background-color: var(--color-background);
 	color: var(--color-text);
 	font-family: var(--font-body);
 	line-height: 1.5;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+  max-width: var(--content-width);
 }
 
 h1,
@@ -20,9 +28,4 @@ h3 {
 :focus-visible {
 	outline: 3px solid var(--color-accent);
 	outline-offset: 4px;
-}
-
-.content-wrapper {
-	width: min(100% - (2 * var(--page-padding)), var(--content-width));
-	margin-inline: auto;
 }

@@ -1,19 +1,17 @@
-:host {
-  display: block;
-}
-
 .header {
-  position: relative;
-  z-index: 10;
+  width: 100%;
   height: 96px;
   background-color: var(--color-background);
+  margin-bottom: 156px;
 }
 
 .header__inner {
   display: flex;
+  width: calc(100% - --page-padding);
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  padding: var(--page-padding);
 }
 
 .header__logo-link {

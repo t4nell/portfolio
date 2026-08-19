@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  margin-bottom: 88px;
+}
+
+.headline {
+    width: calc(100% - 48px);
+    padding: 0 24px;
+}
+
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 128px;
+  font-weight: 800;
+}
+
+h1 span {
+  align-self: center;
+}
+
+.headline__signature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 2rem;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.headline__line {
+    width: 100%;
+    max-width: 673px;
+    height: var(--border-width);
+    background-color: var(--color-text);
+}
