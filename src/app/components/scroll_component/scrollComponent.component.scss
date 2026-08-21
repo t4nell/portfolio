@@ -3,6 +3,7 @@
   width: calc(100% - --page-padding);
   padding: var(--page-padding);
   height: 183px;
+  margin-bottom: 100px;
 }
 
 .arrowContainer {
@@ -14,6 +15,8 @@
 }
 
 .arrowContainer__email {
+  position: relative;
+  top: 20px;
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: 14px;

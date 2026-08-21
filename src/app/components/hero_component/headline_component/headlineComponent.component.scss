@@ -1,6 +1,6 @@
 :host {
-  display: block;
-  margin-bottom: 88px;
+  display: flex;
+  align-items: center;
 }
 
 .headline {
@@ -29,6 +29,10 @@ h1 span {
   color: var(--color-accent);
   font-family: var(--font-heading);
   font-weight: 700;
+}
+
+.headline__name {
+  white-space: nowrap;
 }
 
 .headline__line {
