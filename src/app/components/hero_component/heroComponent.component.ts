@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ScrollComponent } from '../scroll_component/scrollComponent.component';
+import { ScrollComponent } from '../first_scroll_component/scrollComponent.component';
 import { HeadlineComponent } from './headline_component/headlineComponent.component';
 
 @Component({

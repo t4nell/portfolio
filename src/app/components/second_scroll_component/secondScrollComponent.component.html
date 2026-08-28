@@ -1,0 +1,8 @@
+<div [class]="'arrowContainer arrowContainer--' + direction()" aria-hidden="true">
+  <img
+    class="arrow"
+    [class.arrow--flipped]="direction() === 'down-left'"
+    src="/assets/icons/project/arrowDiagonal.svg"
+    alt=""
+  >
+</div>

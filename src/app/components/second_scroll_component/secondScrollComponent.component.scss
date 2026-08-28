@@ -1,0 +1,18 @@
+:host {
+    height: 300px;
+    display: block;
+}
+
+.arrowContainer {
+  display: flex;
+
+  &--down-left {
+    justify-content: flex-end;
+  }
+
+  &--down-right {
+    justify-content: flex-start;
+  }
+}
+
+

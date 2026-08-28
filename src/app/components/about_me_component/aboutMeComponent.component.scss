@@ -1,3 +1,71 @@
 :host {
-  display: block;
+  display: flex;                    
+  justify-content: space-between;   
+  align-items: flex-start;         
+  gap: var(--spacing-lg); 
+  height: 700px;
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.aboutMeTextContainer {
+  display: flex;
+  flex-direction: column;          
+  gap: var(--spacing-md);
+  max-width: 620px;
+  font-size: 22px;
+
+ 
+  .aboutMeFacts {
+    display: flex;
+    flex-direction: column;         
+    gap: var(--spacing-sm);
+
+    .factItem {
+      display: flex;               
+      align-items: center;        
+      gap: var(--spacing-xs);
+    }
+  }
+}
+
+.aboutMeImageContainer {
+  display: flex;
+  flex-shrink: 0;             
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  max-width: 620px;
+}
+
+.portraitPlaceholder {
+  width: 530px;
+  height: 530px;
+  background-color: #ce0000;         
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-sm);
+}
+
+.talkButton {
+  padding: 12px 48px;
+  background-color: transparent;
+  border: var(--border-width) solid var(--color-text);
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+
+  &:hover {
+    background-color: var(--color-text);
+    color: var(--color-text-light);
+  }
 }
