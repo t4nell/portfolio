@@ -1,6 +1,6 @@
 :host {
   display: flex;
-  width: calc(100% - --page-padding);
+  width: calc(100% - var(--page-padding));
   padding: var(--page-padding);
   height: 183px;
   margin-bottom: 100px;

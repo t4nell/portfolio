@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  width: calc(100% - var(--page-padding));
+  max-width: var(--content-width);
+  padding: 0 24px var(--spacing-xl);
+}
+
+.skills {
+  position: relative;
+  margin-top: 80px;
+  padding: 80px 48px 48px;
+  border: var(--border-width) solid var(--color-text);
+}
+
+.skillsTitle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  padding: 0 16px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.skillsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 78px;
+}
+
+.skillsContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skillsAndContact {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 24px;
+
+    a {
+        color: var(--color-accent);
+    }
+}

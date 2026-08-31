@@ -14,7 +14,7 @@
 
 .header__inner {
   display: flex;
-  width: calc(100% - --page-padding);
+  width: calc(100% - var(--page-padding));
   height: 100%;
   align-items: center;
   justify-content: space-between;
