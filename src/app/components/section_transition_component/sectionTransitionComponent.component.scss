@@ -11,8 +11,8 @@
   }
 
   &--down-right {
-    justify-content: flex-start;
+    justify-content: flex-end;
+    transform: rotateY(180deg);
   }
 }
-
 

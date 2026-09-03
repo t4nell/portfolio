@@ -14,7 +14,7 @@
   color: var(--color-text);
 }
 
-.arrowContainer__email {
+.arrowContainerEmail {
   position: relative;
   top: 20px;
   color: var(--color-text);
@@ -25,7 +25,7 @@
   white-space: nowrap;
 }
 
-.arrowContainer__scroll {
+.arrowContainerScroll {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -45,7 +45,7 @@
   height: 92px;
 }
 
-.arrow__line {
+.arrowLine {
   position: absolute;
   top: 0;
   left: 50%;
@@ -56,8 +56,8 @@
   transform: translateX(-50%);
 }
 
-.arrow__line::before,
-.arrow__line::after {
+.arrowLine::before,
+.arrowLine::after {
   position: absolute;
   bottom: 0px;
   width: 28px;
@@ -66,13 +66,13 @@
   content: '';
 }
 
-.arrow__line::before {
+.arrowLine::before {
   right: 0px;
   transform: rotate(45deg);
   transform-origin: right center;
 }
 
-.arrow__line::after {
+.arrowLine::after {
   left: 0px;
   transform: rotate(-45deg);
   transform-origin: left center;
@@ -90,28 +90,3 @@
   transform: rotate(-90deg);
 }
 
-@media (max-width: 600px) {
-  .arrowContainer__email,
-  .arrowContainer__scroll {
-    font-size: 12px;
-  }
-
-  .arrowContainer__scroll {
-    gap: 8px;
-    margin-right: 16px;
-  }
-
-  .arrow {
-    width: 48px;
-    height: 76px;
-  }
-
-  .arrow__line {
-    height: 62px;
-  }
-
-  .arrow__line::before,
-  .arrow__line::after {
-    width: 23px;
-  }
-}

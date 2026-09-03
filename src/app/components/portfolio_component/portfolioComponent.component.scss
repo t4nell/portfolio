@@ -1,0 +1,57 @@
+:host {
+  display: block;
+}
+
+.portfolioHeading {
+  margin-bottom: 64px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.portfolioDescription {
+  text-align: center;
+}
+
+.projectLink {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+
+.projectImage {
+  width: 100%;
+  max-width: 620px;
+  height: 393px;
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.projectNumber {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: end;
+}
+
+.projectOverlay {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 24px;
+  background-color: var(--color-text-light);
+}
+
+.projectCardImageRight .projectImage {
+  grid-column: 2;
+}
+
+.projectCardImageRight .projectNumber {
+  grid-column: 1;
+  text-align: start;
+}
+
+.projectCardImageRight .projectOverlay {
+  grid-column: 1;
+}

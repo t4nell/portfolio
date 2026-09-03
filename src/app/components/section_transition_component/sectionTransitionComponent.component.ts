@@ -3,11 +3,11 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 export type ArrowDirection = 'down-left' | 'down-right';
 
 @Component({
-  selector: 'app-second-scroll-component',
-  templateUrl: './secondScrollComponent.component.html',
-  styleUrl: './secondScrollComponent.component.scss',
+  selector: 'app-section-transition-component',
+  templateUrl: './sectionTransitionComponent.component.html',
+  styleUrl: './sectionTransitionComponent.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SecondScrollComponent {
+export class SectionTransitionComponent {
   readonly direction = input<ArrowDirection>('down-left');
 }

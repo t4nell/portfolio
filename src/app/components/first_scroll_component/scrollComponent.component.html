@@ -1,5 +1,5 @@
 <div class="arrowContainer">
-    <div class="arrowContainer__email">
+    <div class="arrowContainerEmail">
         <a [href]="'mailto:' + email()">
         {{ email() }}
         </a>
@@ -7,14 +7,14 @@
 
   
 
-    <div class="arrowContainer__scroll" aria-hidden="true">
+    <div class="arrowContainerScroll" aria-hidden="true">
         <span
         class="arrow"
         [class]="'arrow arrow--' + direction()"
         >
-        <span class="arrow__line"></span>
+        <span class="arrowLine"></span>
         </span>
-        <span class="arrowContainer__label">Scroll<br>Down</span>
+        <span class="arrowContainerLabel">Scroll<br>Down</span>
     </div>
 
 </div>

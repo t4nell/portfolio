@@ -20,7 +20,7 @@ h1 span {
   align-self: center;
 }
 
-.headline__signature {
+.headlineSignature {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,11 +31,11 @@ h1 span {
   font-weight: 700;
 }
 
-.headline__name {
+.headlineName {
   white-space: nowrap;
 }
 
-.headline__line {
+.headlineLine {
     width: 100%;
     max-width: 673px;
     height: var(--border-width);
