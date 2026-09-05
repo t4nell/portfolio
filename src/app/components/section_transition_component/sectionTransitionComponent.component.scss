@@ -1,6 +1,13 @@
 :host {
-    height: 300px;
-    display: block;
+  height: 300px;
+  display: block;
+  padding-right: var(--spacing-md);
+  padding-left: var(--spacing-md);
+  width: 100%;
+}
+
+:host(.lastTransition) {
+  width: 80%;
 }
 
 .arrowContainer {

@@ -1,0 +1,23 @@
+<section class="referencesSection" aria-labelledby="referencesTitle">
+  <div class="referencesHeading">
+    <h2 id="referencesTitle">References</h2>
+    <p class="referencesDescription">
+      I thrive both independently and as part of a team. Here's
+      <br>
+      what my colleagues have to say about working with me.
+    </p>
+  </div>
+
+  <div class="referencesList">
+    @for (reference of references; track reference.name) {
+      <figure class="referenceCard">
+        <span class="referenceQuoteIcon" aria-hidden="true">&#8221;</span>
+        <figcaption>
+          <h4 class="referenceName">{{ reference.name }}</h4>
+          <span class="referenceRole">{{ reference.role }}</span>
+        </figcaption>
+        <blockquote class="referenceText">{{ reference.text }}</blockquote>
+      </figure>
+    }
+  </div>
+</section>

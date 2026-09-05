@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+}
+
+.referencesHeading {
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  text-align: center;
+  font-family: var(--font-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.referencesDescription {
+  text-align: center;
+  font-size: 22px;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.referencesList {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.referenceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex: 1;
+  max-width: 300px;
+  padding: var(--spacing-md);
+  border: var(--border-width) solid var(--color-text);
+  text-align: center;
+}
+
+.referenceQuoteIcon {
+  font-family: var(--font-body);
+  font-size: 78px;
+  font-weight: 800;
+  line-height: 0.5;
+  position: relative;
+  top: 24px;
+}
+
+.referenceRole {
+  font-size: 16px;
+}
+
+.referenceName {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.referenceText {
+  font-size: 18px;
+  font-family: var(--font-body);
+  font-weight: 400;
+}

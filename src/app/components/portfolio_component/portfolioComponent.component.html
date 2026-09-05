@@ -3,26 +3,27 @@
     <h2 id="portfolioTitle">Portfolio</h2>
     <p class="portfolioDescription">
         Explore a selection of my work here - interact with
-        
+        <br>
         projects to see my skills in action.
     </p>
   </div>
 
   <div class="portfolioList">
-    <article class="projectCard projectCardImageLeft">
-      <a class="projectLink" href="#" aria-label="Projekt 1 öffnen">
-        <img class="projectImage" src="" alt="Vorschau von Projekt 1">
+    @for (project of projects; track project.name; let i = $index, odd = $odd) {
+      <article class="projectCard" [class.projectCardImageRight]="odd">
+        <a class="projectLink" [href]="project.link" [attr.aria-label]="project.name + ' öffnen'">
+          <img class="projectImage" [src]="project.image" [alt]="'Vorschau von ' + project.name">
 
-        <span class="projectNumber">01/04</span>
+          <span class="projectNumber">0{{ i + 1 }}/04</span>
 
-        <div class="projectOverlay">
-          <div>
-            <h3>Project name</h3>
-            <p>Kurze Projektbeschreibung.</p>
+          <div class="projectOverlay">
+            <div>
+              <h3>{{ project.name }}</h3>
+              <p>{{ project.description }}</p>
+            </div>
           </div>
-        </div>
-        
-      </a>
-    </article>
+        </a>
+      </article>
+    }
   </div>
 </section>

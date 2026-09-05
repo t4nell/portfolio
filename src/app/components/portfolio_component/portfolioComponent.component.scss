@@ -1,17 +1,29 @@
 :host {
   display: block;
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
 }
 
 .portfolioHeading {
-  margin-bottom: 64px;
+  margin-bottom: var(--spacing-xl);
 }
 
 h2 {
   text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.portfolioList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
 }
 
 .portfolioDescription {
   text-align: center;
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .projectLink {
@@ -23,24 +35,36 @@ h2 {
 }
 
 .projectImage {
+  background-color: red;
   width: 100%;
   max-width: 620px;
   height: 393px;
   grid-column: 1;
   grid-row: 1 / 3;
+  margin: var(--spacing-md);
 }
 
 .projectNumber {
   grid-column: 2;
   grid-row: 1;
+  align-self: start;
   text-align: end;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  padding-right: var(--spacing-md);
 }
 
 .projectOverlay {
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 1 / 3;
+  align-self: center;
   padding: 24px;
-  background-color: var(--color-text-light);
+  background-color: var(--color-background);
+}
+
+h3 {
+  margin-bottom: var(--spacing-sm);
 }
 
 .projectCardImageRight .projectImage {
