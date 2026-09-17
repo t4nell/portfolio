@@ -1,0 +1,123 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 96px);
+}
+
+.menuLinks {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+}
+
+.menuLinksInner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+
+  a {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-left: 28px;
+    font-family: var(--font-heading);
+    font-size: 94px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-text);
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      bottom: -5px;
+      width: 25px;
+      height: 40px;
+      border-left: 4px solid currentColor;
+      border-bottom: 4px solid currentColor;
+    }
+  }
+}
+
+.menuContact {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  min-height: 220px;
+  padding: 100px var(--spacing-md) var(--spacing-md);
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-light);
+  clip-path: polygon(0 0, 100% 175px, 100% 100%, 0 100%);
+  margin-top: -50px;
+}
+
+.menuContactText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+
+  a {
+    color: var(--color-text-light);
+    text-decoration: none;
+  }
+
+  a:first-child {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  a:last-child {
+    font-family: var(--font-body);
+    font-size: 16px;
+  }
+}
+
+.menuSocials {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding-bottom: 8px;
+
+  img {
+    display: block;
+    width: 40px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .menuContainer {
+    min-height: calc(100vh - 72px);
+  }
+
+  .menuLinksInner {
+    gap: var(--spacing-sm);
+
+    a {
+      font-size: 40px;
+    }
+  }
+
+  .menuContact {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 200px;
+    padding-top: 80px;
+  }
+
+  .menuContactText a:first-child {
+    font-size: 40px;
+  }
+}

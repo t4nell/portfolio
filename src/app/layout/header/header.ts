@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  input,
+  output
+} from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -9,4 +14,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Header {}
+export class Header {
+  readonly menuOpen = input(false);
+  readonly menuToggle = output<void>();
+}

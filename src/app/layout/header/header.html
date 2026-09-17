@@ -21,7 +21,14 @@
         </button>
       </div>
 
-      <button class="menu-button" type="button" aria-label="Menü öffnen" aria-expanded="false">
+      <button
+        class="menu-button"
+        [class.menu-button--open]="menuOpen()"
+        type="button"
+        [attr.aria-label]="menuOpen() ? 'Menü schließen' : 'Menü öffnen'"
+        [attr.aria-expanded]="menuOpen()"
+        (click)="menuToggle.emit()"
+      >
         <span></span>
         <span></span>
         <span></span>

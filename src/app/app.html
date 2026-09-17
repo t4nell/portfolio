@@ -1,11 +1,17 @@
-﻿<app-header />
-<app-hero-component />
-<app-about-me-component />
-<app-section-transition-component direction="down-left" />
-<app-skills-component />
-<app-section-transition-component direction="down-right" />
-<app-portfolio-component />
-<app-references-component />
-<app-section-transition-component direction="down-left" class="lastTransition"/>
-<app-say-hi-component />
+﻿<app-header [menuOpen]="menuOpen()" (menuToggle)="toggleMenu()" />
+
+@if (menuOpen()) {
+  <app-menu />
+} @else {
+  <app-hero-component />
+  <app-about-me-component />
+  <app-section-transition-component direction="down-left" />
+  <app-skills-component />
+  <app-section-transition-component direction="down-right" />
+  <app-portfolio-component />
+  <app-references-component />
+  <app-section-transition-component direction="down-left" class="lastTransition"/>
+  <app-say-hi-component />
+}
+
 <router-outlet />
