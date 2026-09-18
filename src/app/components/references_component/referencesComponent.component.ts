@@ -15,19 +15,19 @@ interface Reference {
 export class ReferencesComponent {
   readonly references: Reference[] = [
     {
-      name: 'V. Schuster',
+      name: 'Ngoc-Khang Duong',
       role: 'Team Partner',
-      text: 'Michel really kept the team together with his great organization and clear communication.'
+      text: 'Working with Michel went really well. He took responsibility, didn\'t shy away from harder tasks, and his structural thinking in complex HTML helped a lot. I\'d work with him again anytime.'
     },
     {
-      name: 'E. Eichinger',
+      name: 'N. siewert',
       role: 'Team Partner',
-      text: 'Michel was a top team colleague. His positive commitment made a significant contribution to achieving our goals.'
+      text: 'Michel is an very important part of our project. Thanks to him, we overcame many problems. He is always reliable and has smart ideas to challenge every difficulty.'
     },
     {
-      name: 'I. Nuber',
-      role: 'Frontend Engineer',
-      text: 'It was a great pleasure to work with Michel. He knows how to push and encourage team members.'
+      name: '',
+      role: '',
+      text: ''
     }
   ];
 }

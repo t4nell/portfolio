@@ -1,7 +1,7 @@
-﻿<app-header [menuOpen]="menuOpen()" (menuToggle)="toggleMenu()" />
+﻿<app-header [menuOpen]="menuOpen()" (menuToggle)="toggleMenu()" (logoClick)="goToHero()" />
 
 @if (menuOpen()) {
-  <app-menu />
+  <app-menu (navigate)="goToSection($event)" />
 } @else {
   <app-hero-component />
   <app-about-me-component />

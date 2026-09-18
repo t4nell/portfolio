@@ -34,4 +34,19 @@ export class App {
   toggleMenu(): void {
     this.menuOpen.update((isOpen) => !isOpen);
   }
+
+  goToHero(): void {
+    this.menuOpen.set(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  goToSection(sectionId: string): void {
+    this.menuOpen.set(false);
+    setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  }
 }

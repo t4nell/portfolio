@@ -11,7 +11,8 @@ interface Project {
   selector: 'app-portfolio-component',
   templateUrl: './portfolioComponent.component.html',
   styleUrl: './portfolioComponent.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { id: 'portfolio' }
 })
 export class PortfolioComponent {
   readonly projects: Project[] = [

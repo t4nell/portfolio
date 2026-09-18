@@ -8,12 +8,14 @@
   
 
     <div class="arrowContainerScroll" aria-hidden="true">
-        <span
-        class="arrow"
-        [class]="'arrow arrow--' + direction()"
-        >
-        <span class="arrowLine"></span>
-        </span>
+        <div class="arrowTrack">
+            <span
+            class="arrow"
+            [class]="'arrow arrow--' + direction()"
+            >
+            <span class="arrowLine"></span>
+            </span>
+        </div>
         <span class="arrowContainerLabel">Scroll<br>Down</span>
     </div>
 

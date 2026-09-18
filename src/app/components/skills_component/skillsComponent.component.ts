@@ -4,6 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-skills-component',
   templateUrl: './skillsComponent.component.html',
   styleUrl: './skillsComponent.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { id: 'skills' }
 })
 export class SkillsComponent {}

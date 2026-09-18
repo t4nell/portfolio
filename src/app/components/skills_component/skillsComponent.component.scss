@@ -4,6 +4,7 @@
   max-width: var(--content-width);
   padding: 0 24px var(--spacing-xl);
   width: 100%;
+  scroll-margin-top: 96px;
 }
 
 .skills {
@@ -38,6 +39,81 @@
 .skillsContainer {
     display: flex;
     justify-content: space-around;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        overflow: visible;
+        perspective: 480px;
+        transform-style: preserve-3d;
+
+        &:hover img {
+            animation: skillLogoOrbit 0.9s ease-in-out;
+        }
+
+        &:hover span {
+            color: var(--color-accent);
+        }
+    }
+
+    img {
+        transform-style: preserve-3d;
+    }
+
+    span {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        transition: color var(--transition);
+    }
+}
+
+@keyframes skillLogoOrbit {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    12.5% {
+        transform: translate3d(25px, 0, -11px);
+    }
+
+    25% {
+        transform: translate3d(36px, 0, -36px);
+    }
+
+    37.5% {
+        transform: translate3d(25px, 0, -61px);
+    }
+
+    50% {
+        transform: translate3d(0, 0, -72px);
+    }
+
+    62.5% {
+        transform: translate3d(-25px, 0, -61px);
+    }
+
+    75% {
+        transform: translate3d(-36px, 0, -36px);
+    }
+
+    87.5% {
+        transform: translate3d(-25px, 0, -11px);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skillsContainer div:hover img {
+        animation: none;
+    }
 }
 
 .skillsAndContact {

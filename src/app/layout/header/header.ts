@@ -5,11 +5,10 @@ import {
   output
 } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [NgOptimizedImage, RouterLink],
+  imports: [NgOptimizedImage],
   templateUrl: './header.html',
   styleUrl: './header.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -17,4 +16,10 @@ import { RouterLink } from '@angular/router';
 export class Header {
   readonly menuOpen = input(false);
   readonly menuToggle = output<void>();
+  readonly logoClick = output<void>();
+
+  onLogoClick(event: Event): void {
+    event.preventDefault();
+    this.logoClick.emit();
+  }
 }

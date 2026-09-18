@@ -1,9 +1,9 @@
 <div class="menuContainer">
   <div class="menuLinks">
     <div class="menuLinksInner">
-      <a href="#about">About me</a>
-      <a href="#skills">My skills</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#about" (click)="onNavigate($event, 'about')">About me</a>
+      <a href="#skills" (click)="onNavigate($event, 'skills')">My skills</a>
+      <a href="#portfolio" (click)="onNavigate($event, 'portfolio')">Portfolio</a>
     </div>
   </div>
 

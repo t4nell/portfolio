@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header__inner">
-    <a class="header__logo-link" routerLink="/" aria-label="Zur Startseite">
+    <a class="header__logo-link" href="#hero" aria-label="Zur Startseite" (click)="onLogoClick($event)">
       <img
         class="header__logo"
         ngSrc="/assets/logo/logoBlack.png"
