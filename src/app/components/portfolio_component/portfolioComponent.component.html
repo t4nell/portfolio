@@ -12,13 +12,21 @@
     @for (project of projects; track project.name; let i = $index, odd = $odd) {
       <article class="projectCard" [class.projectCardImageRight]="odd">
         <a class="projectLink" [href]="project.link" [attr.aria-label]="project.name + ' öffnen'">
-          <img class="projectImage" [src]="project.image" [alt]="'Vorschau von ' + project.name">
+          <div class="projectPreview">
+            <img class="projectImage" [src]="project.image" [alt]="'Vorschau von ' + project.name">
+            <span class="projectArrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 4v16M5 13l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </span>
+          </div>
 
           <span class="projectNumber">0{{ i + 1 }}/04</span>
 
           <div class="projectOverlay">
             <div>
               <h3>{{ project.name }}</h3>
+              <div class="projectSkills">{{ project.skills }}</div>
               <p>{{ project.description }}</p>
             </div>
           </div>

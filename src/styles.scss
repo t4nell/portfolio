@@ -34,6 +34,12 @@ h1 {
 
 h2 {
 	font-size: 78px;
+	cursor: default;
+	transition: color var(--transition);
+
+	&:hover {
+		color: var(--color-accent);
+	}
 }
 
 h3 {
