@@ -15,11 +15,12 @@ interface Project {
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { id: 'portfolio' }
 })
+
 export class PortfolioComponent {
   readonly projects: Project[] = [
-    { name: 'Poll-App', skills: '', description: 'Chat-App im Slack-Stil.', image: '', link: '#' },
-    { name: 'Sucublood', skills: '', description: 'Jump-and-Run-Browsergame.', image: '', link: '#' },
-    { name: 'Join', skills: 'Angular | TypeScript | HTML | CSS | Firebase', description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.', image: '', link: '#' },
-    { name: 'Pokedex', skills: '', description: 'Pokémon-Lexikon mit PokeAPI.', image: '', link: '#' }
+    { name: 'Poll-App', skills: 'Figma | Angular | TypeScript | HTML | CSS | Supabase', description: 'Survey app for creating and taking polls. Browse surveys, \nadd questions with answer options and store responses \nin a Supabase database.', image: '', link: '#' },
+    { name: 'Sucublood', skills: 'Figma | JavaScript | HTML | CSS | OOP | Canvas', description: 'Jump-and-run browser game built with the Canvas API. \nFight demons, collect items and defeat the end boss \nusing melee and ranged attacks.', image: '', link: '#' },
+    { name: 'Join', skills: 'Figma | TypeScript | HTML | CSS | Firebase', description: 'Task manager inspired by the Kanban System. \nCreate and organize tasks using drag and drop functions, \nassign users and categories.', image: '', link: '#' },
+    { name: 'Pokedex', skills: 'Figma | Rest-API | JavaScript | HTML | CSS', description: 'Pokémon encyclopedia powered by the PokeAPI. \nBrowse the catalog, inspect types and stats and \nopen detailed profiles for each Pokémon.', image: '', link: '#' }
   ];
 }
