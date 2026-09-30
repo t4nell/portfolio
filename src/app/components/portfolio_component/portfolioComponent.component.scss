@@ -41,6 +41,7 @@ h2 {
 
   &:hover .projectImage {
     box-shadow: 0 0 0 6px var(--color-text);
+    filter: grayscale(0);
   }
 
   &:hover .projectArrow {
@@ -60,15 +61,17 @@ h2 {
   width: 100%;
   max-width: 620px;
   margin: var(--spacing-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
 }
 
 .projectImage {
   display: block;
-  background-color: red;
   width: 100%;
   height: 393px;
+  object-fit: cover;
+  filter: grayscale(1);
   box-shadow: 0 0 0 6px transparent;
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), filter var(--transition);
 }
 
 .projectArrow {
