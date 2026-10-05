@@ -1,7 +1,11 @@
-<div [class]="'arrowContainer arrowContainer--' + direction()" aria-hidden="true">
+<div
+  [class]="'arrowContainer arrowContainer--' + direction()"
+  [class.arrowContainer--nudge]="nudged()"
+  aria-hidden="true"
+>
   <img
+    #arrow
     class="arrow"
-    [class.arrow--flipped]="direction() === 'down-left'"
     src="/assets/icons/project/arrowDiagonal.svg"
     alt=""
   >

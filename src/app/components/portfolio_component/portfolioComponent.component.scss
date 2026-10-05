@@ -56,12 +56,15 @@ h2 {
 .projectPreview {
   position: relative;
   z-index: 2;
+  display: block;
   grid-column: 1;
   grid-row: 1 / 3;
   width: 100%;
   max-width: 620px;
   margin: var(--spacing-md);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  color: inherit;
+  text-decoration: none;
 }
 
 .projectImage {
@@ -137,6 +140,27 @@ h3 {
 
 .projectOverlay p {
   white-space: pre-line;
+  margin-bottom: var(--spacing-sm);
+}
+
+.githubButton {
+  display: inline-block;
+  margin-top: var(--spacing-xs);
+  padding: 16px 64px;
+  background-color: transparent;
+  border: var(--border-width) solid var(--color-text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: padding var(--transition), font-weight var(--transition);
+
+  &:hover {
+    padding: 16px 84px;
+    font-weight: 600;
+  }
 }
 
 .projectCardImageRight .projectPreview {

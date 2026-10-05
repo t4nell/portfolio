@@ -11,8 +11,8 @@
   <div class="portfolioList">
     @for (project of projects; track project.name; let i = $index, odd = $odd) {
       <article class="projectCard" [class.projectCardImageRight]="odd">
-        <a class="projectLink" [href]="project.link" [attr.aria-label]="project.name + ' öffnen'">
-          <div class="projectPreview">
+        <div class="projectLink">
+          <a class="projectPreview" [href]="project.link" [attr.aria-label]="project.name + ' öffnen'">
             <img class="projectImage" [src]="project.image" [alt]="'Vorschau von ' + project.name">
             <span class="projectArrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
@@ -20,7 +20,7 @@
                 <path d="M5 13l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
               </svg>
             </span>
-          </div>
+          </a>
 
           <span class="projectNumber">0{{ i + 1 }}/04</span>
 
@@ -29,9 +29,15 @@
               <h3>{{ project.name }}</h3>
               <div class="projectSkills">{{ project.skills }}</div>
               <p>{{ project.description }}</p>
+              <a
+                class="githubButton"
+                [href]="project.github"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Github</a>
             </div>
           </div>
-        </a>
+        </div>
       </article>
     }
   </div>

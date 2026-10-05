@@ -12,14 +12,26 @@
 
 .arrowContainer {
   display: flex;
+  transition: transform 600ms ease;
 
   &--down-left {
     justify-content: flex-end;
+
+    &.arrowContainer--nudge {
+      transform: translate(-24px, 24px);
+    }
   }
 
   &--down-right {
     justify-content: flex-end;
     transform: rotateY(180deg);
+
+    &.arrowContainer--nudge {
+      transform: rotateY(180deg) translate(-24px, 24px);
+    }
   }
 }
 
+.arrow {
+  display: block;
+}

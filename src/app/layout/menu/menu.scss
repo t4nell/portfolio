@@ -40,11 +40,46 @@
       position: absolute;
       left: -5px;
       bottom: -5px;
+      box-sizing: border-box;
       width: 25px;
       height: 40px;
       border-left: 4px solid currentColor;
       border-bottom: 4px solid currentColor;
     }
+
+    &:hover::before {
+      animation: menuLWander 600ms ease forwards;
+    }
+  }
+}
+
+@keyframes menuLWander {
+  0% {
+    left: -5px;
+    width: 25px;
+    height: 40px;
+    border-left-width: 4px;
+  }
+
+  25% {
+    left: -5px;
+    width: 25px;
+    height: 4px;
+    border-left-width: 0;
+  }
+
+  55% {
+    left: -5px;
+    width: calc(100% + 5px);
+    height: 4px;
+    border-left-width: 0;
+  }
+
+  100% {
+    left: 60%;
+    width: 40%;
+    height: 4px;
+    border-left-width: 0;
   }
 }
 
@@ -76,6 +111,11 @@
     font-size: 64px;
     font-weight: 800;
     line-height: 1.1;
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--color-accent);
+    }
   }
 
   a:last-child {

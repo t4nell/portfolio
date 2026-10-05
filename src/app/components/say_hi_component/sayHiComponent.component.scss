@@ -9,6 +9,7 @@
   color: var(--color-text-light);
   clip-path: polygon(0 0, 100% 175px, 100% 100%, 0 100%);
   padding: calc(var(--spacing-xl) + 80px) 24px var(--spacing-sm);
+  scroll-margin-top: 96px;
 }
 
 h2 {

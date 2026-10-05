@@ -37,6 +37,15 @@ h2 {
   padding: var(--spacing-md);
   border: var(--border-width) solid var(--color-text);
   text-align: center;
+  transition: border-color var(--transition);
+
+  &:hover {
+    border-color: var(--color-accent);
+
+    .referenceQuoteIcon {
+      color: var(--color-accent);
+    }
+  }
 }
 
 .referenceQuoteIcon {
@@ -46,6 +55,7 @@ h2 {
   line-height: 0.5;
   position: relative;
   top: 24px;
+  transition: color var(--transition);
 }
 
 .referenceRole {

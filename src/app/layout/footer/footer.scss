@@ -16,9 +16,19 @@
   display: flex;
   justify-content: flex-end;
 
+  a {
+    display: inline-block;
+    line-height: 0;
+  }
+
   img {
     width: 50px;
-    transform: rotate(-225deg);
+    transform-origin: center bottom;
+    transition: transform var(--transition);
+  }
+
+  a:hover img {
+    transform: scaleY(1.25);
   }
 }
 
