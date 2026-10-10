@@ -1,9 +1,11 @@
 :host {
+  --scroll-track-height: 200px;
+
   display: flex;
-  width: calc(100% - var(--page-padding));
-  padding: var(--page-padding);
+  padding: 0 var(--page-padding-x);
   height: 256px;
   margin-bottom: var(--spacing-lg);
+  width: calc(100% - var(--page-padding-x) * 2);
 }
 
 .arrowContainer {
@@ -32,7 +34,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
-  margin-right: 24px;
+  margin-right: var(--page-padding-x);
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: 14px;
@@ -44,7 +46,7 @@
   position: relative;
   z-index: 0;
   width: 56px;
-  height: 200px;
+  height: var(--scroll-track-height);
   overflow: hidden;
 }
 
@@ -118,7 +120,36 @@
   }
 
   100% {
-    transform: translateY(calc(200px + 100%));
+    transform: translateY(calc(var(--scroll-track-height) + 100%));
+  }
+}
+
+@media (max-width: 600px) {
+  :host {
+    --scroll-track-height: 110px;
+    height: 168px;
+  }
+
+  .arrowContainerScroll {
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+
+  .arrowContainerLabel {
+    font-size: 16px;
+  }
+
+  .arrow {
+    height: 72px;
+  }
+
+  .arrowLine {
+    height: 56px;
+  }
+
+  .arrowLine::before,
+  .arrowLine::after {
+    width: 22px;
   }
 }
 
@@ -128,4 +159,3 @@
     transform: translateY(54px);
   }
 }
-

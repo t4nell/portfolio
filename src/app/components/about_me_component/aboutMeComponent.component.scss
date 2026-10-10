@@ -1,12 +1,12 @@
 :host {
-  width: 100%;
-  display: flex;                    
-  justify-content: space-between;   
-  align-items: flex-start;         
-  gap: var(--spacing-lg); 
-  height: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  width: calc(100% - var(--page-padding-x) * 2);
+  padding: 0 var(--page-padding-x);
   margin-bottom: var(--spacing-lg);
-  scroll-margin-top: 96px;
+  scroll-margin-top: var(--header-height);
 }
 
 h2 {
@@ -15,20 +15,19 @@ h2 {
 
 .aboutMeTextContainer {
   display: flex;
-  flex-direction: column;          
+  flex-direction: column;
   gap: var(--spacing-md);
   max-width: 620px;
   font-size: 22px;
 
- 
   .aboutMeFacts {
     display: flex;
-    flex-direction: column;         
+    flex-direction: column;
     gap: var(--spacing-sm);
 
     .factItem {
-      display: flex;               
-      align-items: center;        
+      display: flex;
+      align-items: center;
       gap: var(--spacing-xs);
     }
   }
@@ -36,18 +35,17 @@ h2 {
 
 .aboutMeImageContainer {
   display: flex;
-  flex-shrink: 0;             
+  flex-shrink: 0;
   justify-content: center;
   align-items: flex-end;
-  height: 100%;
   width: 100%;
   max-width: 620px;
 }
 
 .portraitPlaceholder {
-  width: 530px;
-  height: 530px;
-  background-color: #ce0000;         
+  width: min(530px, 100%);
+  aspect-ratio: 1;
+  background-color: #ce0000;
 }
 
 .buttonContainer {
@@ -72,5 +70,35 @@ h2 {
   &:hover {
     padding: 12px 64px;
     font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+  :host {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutMeTextContainer {
+    max-width: 100%;
+  }
+
+  .aboutMeImageContainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutMeTextContainer {
+    font-size: 18px;
+  }
+
+  .talkButton {
+    padding: 12px 32px;
+    font-size: 18px;
+
+    &:hover {
+      padding: 12px 40px;
+    }
   }
 }

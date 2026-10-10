@@ -46,7 +46,41 @@ h3 {
 	font-size: 64px;
 }
 
+@media (max-width: 1100px) {
+	h1 {
+		font-size: clamp(64px, 10vw, 96px);
+	}
+
+	h2 {
+		font-size: clamp(48px, 8vw, 64px);
+	}
+
+	h3 {
+		font-size: clamp(40px, 7vw, 56px);
+	}
+}
+
+@media (max-width: 600px) {
+	h1 {
+		font-size: clamp(40px, 12vw, 56px);
+	}
+
+	h2 {
+		font-size: clamp(32px, 10vw, 44px);
+	}
+
+	h3 {
+		font-size: clamp(28px, 8vw, 36px);
+	}
+}
+
 :focus-visible {
 	outline: 3px solid var(--color-accent);
 	outline-offset: 4px;
+}
+
+@media (max-width: 330px) {
+	h1 {
+		font-size: clamp(38px, 10vw, 56px);
+	}
 }

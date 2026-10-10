@@ -1,7 +1,8 @@
 :host {
   display: block;
   margin-bottom: var(--spacing-lg);
-  width: 100%;
+  width: calc(100% - var(--page-padding-x) * 2);
+  padding: 0 var(--page-padding-x);
 }
 
 .referencesHeading {

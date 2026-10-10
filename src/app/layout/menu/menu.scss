@@ -6,7 +6,7 @@
 .menuContainer {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 96px);
+  min-height: calc(100vh - var(--header-height));
 }
 
 .menuLinks {
@@ -138,10 +138,6 @@
 }
 
 @media (max-width: 600px) {
-  .menuContainer {
-    min-height: calc(100vh - 72px);
-  }
-
   .menuLinksInner {
     gap: var(--spacing-sm);
 

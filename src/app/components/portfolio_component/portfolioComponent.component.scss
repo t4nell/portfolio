@@ -1,8 +1,9 @@
 :host {
   display: block;
   margin-bottom: var(--spacing-lg);
-  width: 100%;
-  scroll-margin-top: 96px;
+  width: calc(100% - var(--page-padding-x) * 2);
+  padding: 0 var(--page-padding-x);
+  scroll-margin-top: var(--header-height);
 }
 
 .portfolioHeading {

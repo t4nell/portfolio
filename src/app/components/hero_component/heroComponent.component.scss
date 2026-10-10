@@ -7,17 +7,23 @@
   display: flex;
   width: 100%;
   max-width: 1440px;
-  height: calc(100vh - 96px);
-  min-height: calc(100vh - 96px);
+  height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
   flex-direction: column;
   margin-bottom: var(--spacing-lg);
 }
 
 app-headline-component {
   flex: 1 1 auto;
+  min-height: 0;
 }
 
 app-scroll-component {
   flex: 0 0 256px;
 }
 
+@media (max-width: 600px) {
+  app-scroll-component {
+    flex: 0 0 168px;
+  }
+}

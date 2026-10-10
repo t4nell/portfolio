@@ -1,9 +1,8 @@
 :host {
   height: 300px;
   display: block;
-  padding-right: var(--spacing-md);
-  padding-left: var(--spacing-md);
-  width: 100%;
+  width: calc(100% - var(--page-padding-x) * 2);
+  padding: 0 var(--page-padding-x);
 }
 
 :host(.lastTransition) {
