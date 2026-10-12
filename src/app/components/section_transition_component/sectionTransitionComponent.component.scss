@@ -34,3 +34,14 @@
 .arrow {
   display: block;
 }
+
+@media (max-width: 1000px) {
+  :host(.lastTransition) {
+    width: 100%;
+  }
+
+  .arrowContainer--down-left,
+  .arrowContainer--down-right {
+    justify-content: center;
+  }
+}

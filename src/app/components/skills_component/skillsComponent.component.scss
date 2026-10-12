@@ -9,7 +9,7 @@
 .skills {
   position: relative;
   margin-top: 80px;
-  padding: 80px 48px 48px;
+  padding: 120px 48px 48px;
   border: var(--border-width) solid var(--color-text);
 }
 
@@ -34,178 +34,263 @@
 }
 
 .skillsContent {
-    display: flex;
-    flex-direction: column;
-    gap: 78px;
+  display: flex;
+  flex-direction: column;
+  gap: 78px;
 }
 
 .skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  gap: 32px 48px;
+
+  div {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    overflow: visible;
+    perspective: 480px;
+    transform-style: preserve-3d;
 
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        overflow: visible;
-        perspective: 480px;
-        transform-style: preserve-3d;
-
-        &:hover img {
-            animation: skillLogoOrbit 0.9s ease-in-out;
-        }
-
-        &:hover span {
-            color: var(--color-accent);
-        }
+    &:hover img {
+      animation: skillLogoOrbit 0.9s ease-in-out;
     }
 
-    img {
-        width: 75px;
-        height: 75px;
-        object-fit: contain;
-        transform-style: preserve-3d;
+    &:hover span {
+      color: var(--color-accent);
     }
+  }
 
-    span {
-        display: block;
-        font-size: 16px;
-        font-weight: 600;
-        text-align: center;
-        transition: color var(--transition);
-    }
+  img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    transform-style: preserve-3d;
+  }
+
+  span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: color var(--transition);
+  }
 }
 
 @keyframes skillLogoOrbit {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
 
-    12.5% {
-        transform: translate3d(25px, 0, -11px);
-    }
+  12.5% {
+    transform: translate3d(25px, 0, -11px);
+  }
 
-    25% {
-        transform: translate3d(36px, 0, -36px);
-    }
+  25% {
+    transform: translate3d(36px, 0, -36px);
+  }
 
-    37.5% {
-        transform: translate3d(25px, 0, -61px);
-    }
+  37.5% {
+    transform: translate3d(25px, 0, -61px);
+  }
 
-    50% {
-        transform: translate3d(0, 0, -72px);
-    }
+  50% {
+    transform: translate3d(0, 0, -72px);
+  }
 
-    62.5% {
-        transform: translate3d(-25px, 0, -61px);
-    }
+  62.5% {
+    transform: translate3d(-25px, 0, -61px);
+  }
 
-    75% {
-        transform: translate3d(-36px, 0, -36px);
-    }
+  75% {
+    transform: translate3d(-36px, 0, -36px);
+  }
 
-    87.5% {
-        transform: translate3d(-25px, 0, -11px);
-    }
+  87.5% {
+    transform: translate3d(-25px, 0, -11px);
+  }
 
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .skillsContainer div:hover img {
-        animation: none;
-    }
+  .skillsContainer div:hover img {
+    animation: none;
+  }
 }
 
 .skillsAndContact {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 24px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 24px;
 
-    img:hover {
-        animation: skillLearnSpin 0.8s ease-in-out;
+  img {
+    flex-shrink: 0;
+  }
+
+  > span {
+    min-width: 0;
+  }
+
+  img:hover {
+    animation: skillLearnSpin 0.8s ease-in-out;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    color: var(--color-accent);
+    font-weight: 400;
+    transition: font-weight var(--transition);
+
+    &:hover {
+      font-weight: 700;
     }
 
-    a {
-        position: relative;
-        display: inline-block;
-        color: var(--color-accent);
-        font-weight: 400;
-        transition: font-weight var(--transition);
-
-        &:hover {
-            font-weight: 700;
-        }
-
-        &::after,
-        &::before {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 2px;
-            content: '';
-            transform: scaleX(0);
-            transform-origin: left;
-        }
-
-        &::after {
-            width: 100%;
-            background-color: var(--color-accent);
-            transition: transform 300ms ease 300ms;
-        }
-
-        &::before {
-            z-index: 1;
-            width: 50%;
-            background-color: var(--color-background);
-            transition: transform 300ms ease 0ms;
-        }
-
-        &:hover::after {
-            transform: scaleX(1);
-            transition: transform 300ms ease 0ms;
-        }
-
-        &:hover::before {
-            transform: scaleX(1);
-            transition: transform 300ms ease 300ms;
-        }
+    &::after,
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      content: '';
+      transform: scaleX(0);
+      transform-origin: left;
     }
+
+    &::after {
+      width: 100%;
+      background-color: var(--color-accent);
+      transition: transform 300ms ease 300ms;
+    }
+
+    &::before {
+      z-index: 1;
+      width: 50%;
+      background-color: var(--color-background);
+      transition: transform 300ms ease 0ms;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transition: transform 300ms ease 0ms;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+      transition: transform 300ms ease 300ms;
+    }
+  }
 }
 
 @keyframes skillLearnSpin {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(-360deg);
-    }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .skillsAndContact img:hover {
-        animation: none;
+  .skillsAndContact img:hover {
+    animation: none;
+  }
+
+  .skillsAndContact a::after,
+  .skillsAndContact a::before {
+    transition: none;
+  }
+
+  .skillsAndContact a:hover::after {
+    left: 50%;
+    width: 50%;
+    transform: scaleX(1);
+  }
+
+  .skillsAndContact a:hover::before {
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .skills {
+    margin-top: 64px;
+    padding: 64px 24px 32px;
+  }
+
+  .skillsTitle {
+    font-size: clamp(40px, 6vw, 56px);
+    padding: 0 12px;
+  }
+
+  .skillsContent {
+    gap: 48px;
+  }
+
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 32px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .skills {
+    margin-top: 48px;
+    padding: 48px 16px 24px;
+  }
+
+  .skillsTitle {
+    font-size: clamp(32px, 10vw, 40px);
+    padding: 0 8px;
+  }
+
+  .skillsContent {
+    gap: 32px;
+  }
+
+  .skillsContainer {
+    gap: 20px 24px;
+
+    img {
+      width: 60px;
+      height: 60px;
     }
 
-    .skillsAndContact a::after,
-    .skillsAndContact a::before {
-        transition: none;
+    span {
+      font-size: 14px;
     }
 
-    .skillsAndContact a:hover::after {
-        left: 50%;
-        width: 50%;
-        transform: scaleX(1);
+    div:hover img {
+      animation: none;
+    }
+  }
+
+  .skillsAndContact {
+    align-items: center;
+    gap: 16px;
+
+    > span {
+      font-size: 14px;
     }
 
-    .skillsAndContact a:hover::before {
-        transform: scaleX(0);
+    img:hover {
+      animation: none;
     }
+  }
 }
