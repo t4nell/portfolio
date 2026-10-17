@@ -37,7 +37,7 @@
 
 @media (max-width: 1000px) {
   :host(.lastTransition) {
-    width: 100%;
+    width: calc(100% - var(--page-padding-x) * 2);
   }
 
   .arrowContainer--down-left,

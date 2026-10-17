@@ -212,3 +212,77 @@ h3 {
     transform: rotate(135deg);
   }
 }
+
+@media (max-width: 1420px) {
+  .projectLink {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    overflow: visible;
+  }
+
+  .projectNumber {
+    grid-column: 1;
+    grid-row: auto;
+    order: 1;
+    text-align: end;
+    padding-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .projectPreview {
+    grid-column: 1;
+    grid-row: auto;
+    order: 2;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .projectOverlay {
+    grid-column: 1;
+    grid-row: auto;
+    order: 3;
+    align-self: stretch;
+    transform: none;
+    opacity: 1;
+    padding: var(--spacing-md) 0 0;
+  }
+
+  .projectCardImageRight .projectPreview,
+  .projectCardImageRight .projectNumber,
+  .projectCardImageRight .projectOverlay {
+    grid-column: 1;
+  }
+
+  .projectCardImageRight .projectNumber {
+    text-align: start;
+  }
+
+  .projectCardImageRight .projectOverlay {
+    transform: none;
+  }
+
+  .projectLink:hover .projectOverlay {
+    transform: none;
+  }
+
+  .projectImage {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .projectArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 100px) {
+  .projectNumber {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projectNumber {
+    font-size: 23px;
+  }
+}

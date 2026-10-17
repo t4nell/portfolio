@@ -115,3 +115,9 @@ textarea.formField {
     color: var(--color-text);
   }
 }
+
+@media (max-width: 1000px) {
+  .sayHiSection {
+    clip-path: polygon(0 40px, 100% 175px, 100% 100%, 0 100%);
+  }
+}

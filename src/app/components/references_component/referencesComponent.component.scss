@@ -35,6 +35,7 @@ h2 {
   gap: var(--spacing-sm);
   flex: 1;
   max-width: 300px;
+  min-width: 0;
   padding: var(--spacing-md);
   border: var(--border-width) solid var(--color-text);
   text-align: center;
@@ -73,4 +74,22 @@ h2 {
   font-size: 18px;
   font-family: var(--font-body);
   font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .referencesList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .referenceCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .referenceCard {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }

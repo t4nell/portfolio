@@ -61,3 +61,32 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 600px) {
+  .footerContainer {
+    grid-template-columns: 1fr;
+    margin-top: var(--spacing-md);
+    padding: 0;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footerArrow {
+    display: none;
+  }
+
+  .footerBrand {
+    grid-column: 1;
+    align-items: center;
+  }
+
+  .footerSocials {
+    grid-column: 1;
+    justify-content: center;
+  }
+
+  .footerLegal {
+    grid-column: 1;
+    justify-content: center;
+  }
+}
