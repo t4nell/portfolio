@@ -1,9 +1,12 @@
 :host {
   display: block;
+  width: 100%;
   margin-bottom: var(--spacing-lg);
-  width: calc(100% - var(--page-padding-x) * 2);
-  padding: 0 var(--page-padding-x);
   scroll-margin-top: var(--header-height);
+}
+
+.portfolioLimit {
+  padding: 0 var(--page-padding-x);
 }
 
 .portfolioHeading {
@@ -275,7 +278,7 @@ h3 {
   }
 }
 
-@media (max-width: 100px) {
+@media (max-width: 1000px) {
   .projectNumber {
     font-size: 32px;
   }
@@ -284,5 +287,9 @@ h3 {
 @media (max-width: 600px) {
   .projectNumber {
     font-size: 23px;
+  }
+
+  .portfolioDescription {
+    font-size: 20px;
   }
 }

@@ -1,12 +1,16 @@
 :host {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+  scroll-margin-top: var(--header-height);
+}
+
+.aboutMeContent {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--spacing-lg);
-  width: calc(100% - var(--page-padding-x) * 2);
   padding: 0 var(--page-padding-x);
-  margin-bottom: var(--spacing-lg);
-  scroll-margin-top: var(--header-height);
 }
 
 h2 {
@@ -76,7 +80,7 @@ h2 {
 }
 
 @media (max-width: 1200px) {
-  :host {
+  .aboutMeContent {
     flex-direction: column;
     align-items: center;
   }

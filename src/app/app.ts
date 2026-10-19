@@ -33,20 +33,25 @@ export class App {
 
   toggleMenu(): void {
     this.menuOpen.update((isOpen) => !isOpen);
+    this.syncBodyScroll();
   }
 
   goToHero(): void {
     this.menuOpen.set(false);
+    this.syncBodyScroll();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   goToSection(sectionId: string): void {
     this.menuOpen.set(false);
-    setTimeout(() => {
-      document.getElementById(sectionId)?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+    this.syncBodyScroll();
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
     });
+  }
+
+  private syncBodyScroll(): void {
+    document.body.style.overflow = this.menuOpen() ? 'hidden' : '';
   }
 }

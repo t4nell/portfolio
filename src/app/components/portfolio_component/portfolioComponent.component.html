@@ -1,44 +1,46 @@
-<section class="portfolioSection" aria-labelledby="portfolioTitle">
-  <div class="portfolioHeading">
-    <h2 id="portfolioTitle">Portfolio</h2>
-    <p class="portfolioDescription">
-        Explore a selection of my work here - interact with
-        <br>
-        projects to see my skills in action.
-    </p>
-  </div>
+<div class="content-limit portfolioLimit">
+  <section class="portfolioSection" aria-labelledby="portfolioTitle">
+    <div class="portfolioHeading">
+      <h2 id="portfolioTitle">Portfolio</h2>
+      <p class="portfolioDescription">
+          Explore a selection of my work here - interact with
+          <br>
+          projects to see my skills in action.
+      </p>
+    </div>
 
-  <div class="portfolioList">
-    @for (project of projects; track project.name; let i = $index, odd = $odd) {
-      <article class="projectCard" [class.projectCardImageRight]="odd">
-        <div class="projectLink">
-          <a class="projectPreview" [href]="project.link" [attr.aria-label]="project.name + ' öffnen'">
-            <img class="projectImage" [src]="project.image" [alt]="'Vorschau von ' + project.name">
-            <span class="projectArrow" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 4v16" transform="translate(0 -1)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-                <path d="M5 13l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
-              </svg>
-            </span>
-          </a>
+    <div class="portfolioList">
+      @for (project of projects; track project.name; let i = $index, odd = $odd) {
+        <article class="projectCard" [class.projectCardImageRight]="odd">
+          <div class="projectLink">
+            <a class="projectPreview" [href]="project.link" [attr.aria-label]="project.name + ' öffnen'">
+              <img class="projectImage" [src]="project.image" [alt]="'Vorschau von ' + project.name">
+              <span class="projectArrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 4v16" transform="translate(0 -1)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+                  <path d="M5 13l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </span>
+            </a>
 
-          <span class="projectNumber">0{{ i + 1 }}/04</span>
+            <span class="projectNumber">0{{ i + 1 }}/04</span>
 
-          <div class="projectOverlay">
-            <div>
-              <h3>{{ project.name }}</h3>
-              <div class="projectSkills">{{ project.skills }}</div>
-              <p>{{ project.description }}</p>
-              <a
-                class="githubButton"
-                [href]="project.github"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Github</a>
+            <div class="projectOverlay">
+              <div>
+                <h3>{{ project.name }}</h3>
+                <div class="projectSkills">{{ project.skills }}</div>
+                <p>{{ project.description }}</p>
+                <a
+                  class="githubButton"
+                  [href]="project.github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Github</a>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
-    }
-  </div>
-</section>
+        </article>
+      }
+    </div>
+  </section>
+</div>

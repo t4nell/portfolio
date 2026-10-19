@@ -1,9 +1,11 @@
 :host {
   display: block;
-  width: calc(100% - var(--page-padding-x) * 2);
-  max-width: var(--content-width);
-  padding: 0 var(--page-padding-x) var(--spacing-xl);
+  width: 100%;
   scroll-margin-top: var(--header-height);
+}
+
+.skillsLimit {
+  padding: 0 var(--page-padding-x) var(--spacing-xl);
 }
 
 .skills {

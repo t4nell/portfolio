@@ -4,9 +4,12 @@
 
 
 body {
-	display: flex;
-	justify-content: center;
 	background-color: var(--color-background);
+	background-image: radial-gradient(
+		rgba(0, 0, 0, 0.08) 1px,
+		transparent 1px
+	);
+	background-size: 124px 124px;
 	color: var(--color-text);
 	font-family: var(--font-body);
 	line-height: 1.5;
@@ -15,9 +18,14 @@ body {
 app-root {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+}
+
+.content-limit {
   width: 100%;
   max-width: var(--content-width);
+  margin-inline: auto;
+  box-sizing: border-box;
 }
 
 h1,

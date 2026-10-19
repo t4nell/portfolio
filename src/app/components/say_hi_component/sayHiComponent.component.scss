@@ -8,8 +8,12 @@
   background-color: var(--color-surface-dark);
   color: var(--color-text-light);
   clip-path: polygon(0 0, 100% 175px, 100% 100%, 0 100%);
-  padding: calc(var(--spacing-xl) + 80px) var(--page-padding-x) var(--spacing-sm);
+  padding: calc(var(--spacing-xl) + 80px) 0 var(--spacing-sm);
   scroll-margin-top: var(--header-height);
+}
+
+.sayHiInner {
+  padding: 0 var(--page-padding-x);
 }
 
 h2 {
@@ -116,8 +120,28 @@ textarea.formField {
   }
 }
 
+.sendButtonMobile {
+  font-weight: 400;
+  font-size: 23px;
+  display: none;
+}
+
 @media (max-width: 1000px) {
+  .sendButtonDesktop {
+    display: none;
+  }
+
+  .sendButtonMobile {
+    display: inline;
+  }
+}
+
+@media (max-width: 600px) {
+  .sayHiMessage {
+    font-size: 20px;
+  }
+
   .sayHiSection {
-    clip-path: polygon(0 40px, 100% 175px, 100% 100%, 0 100%);
+    clip-path: polygon(0 50px, 100% 130px, 100% 100%, 0 100%);
   }
 }

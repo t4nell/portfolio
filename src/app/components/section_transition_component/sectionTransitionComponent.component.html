@@ -1,12 +1,14 @@
-<div
-  [class]="'arrowContainer arrowContainer--' + direction()"
-  [class.arrowContainer--nudge]="nudged()"
-  aria-hidden="true"
->
-  <img
-    #arrow
-    class="arrow"
-    src="/assets/icons/project/arrowDiagonal.svg"
-    alt=""
+<div class="content-limit transitionLimit">
+  <div
+    [class]="'arrowContainer arrowContainer--' + direction()"
+    [class.arrowContainer--nudge]="nudged()"
+    aria-hidden="true"
   >
+    <img
+      #arrow
+      class="arrow"
+      src="/assets/icons/project/arrowDiagonal.svg"
+      alt=""
+    >
+  </div>
 </div>

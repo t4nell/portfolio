@@ -1,7 +1,10 @@
 :host {
   display: block;
+  width: 100%;
   margin-bottom: var(--spacing-lg);
-  width: calc(100% - var(--page-padding-x) * 2);
+}
+
+.referencesLimit {
   padding: 0 var(--page-padding-x);
 }
 
@@ -84,6 +87,12 @@ h2 {
 
   .referenceCard {
     width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  :host {
+    margin-bottom: var(--spacing-sm);
   }
 }
 

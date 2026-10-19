@@ -1,12 +1,26 @@
 :host {
+  position: fixed;
+  top: var(--header-height);
+  bottom: 20vh;
+  left: 50%;
+  z-index: 9;
   display: block;
   width: 100%;
+  max-width: var(--content-width);
+  overflow: auto;
+  transform: translateX(-50%);
+  background-color: var(--color-background);
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 124px 124px;
 }
 
 .menuContainer {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--header-height));
+  min-height: 100%;
 }
 
 .menuLinks {
