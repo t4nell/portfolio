@@ -8,6 +8,7 @@ import { SayHiComponent } from './components/say_hi_component/sayHiComponent.com
 import { SectionTransitionComponent } from './components/section_transition_component/sectionTransitionComponent.component';
 import { SkillsComponent } from './components/skills_component/skillsComponent.component';
 import { Header } from './layout/header/header';
+import { LegalNotice } from './layout/legal_notice/legalNotice';
 import { Menu } from './layout/menu/menu';
 
 @Component({
@@ -16,6 +17,7 @@ import { Menu } from './layout/menu/menu';
     RouterOutlet,
     Header,
     Menu,
+    LegalNotice,
     HeroComponent,
     AboutMeComponent,
     SectionTransitionComponent,
@@ -30,20 +32,30 @@ import { Menu } from './layout/menu/menu';
 })
 export class App {
   readonly menuOpen = signal(false);
+  readonly legalOpen = signal(false);
 
   toggleMenu(): void {
     this.menuOpen.update((isOpen) => !isOpen);
     this.syncBodyScroll();
   }
 
+  openLegal(): void {
+    this.menuOpen.set(false);
+    this.legalOpen.set(true);
+    this.syncBodyScroll();
+    window.scrollTo({ top: 0 });
+  }
+
   goToHero(): void {
     this.menuOpen.set(false);
+    this.legalOpen.set(false);
     this.syncBodyScroll();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   goToSection(sectionId: string): void {
     this.menuOpen.set(false);
+    this.legalOpen.set(false);
     this.syncBodyScroll();
     document.getElementById(sectionId)?.scrollIntoView({
       behavior: 'smooth',

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, output } from '@angular/core';
 import { Footer } from '../../layout/footer/footer';
 
 @Component({
@@ -8,4 +8,6 @@ import { Footer } from '../../layout/footer/footer';
   styleUrl: './sayHiComponent.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SayHiComponent {}
+export class SayHiComponent {
+  readonly legalClick = output<void>();
+}

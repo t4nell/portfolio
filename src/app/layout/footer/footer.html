@@ -1,17 +1,21 @@
-<div class="footerContainer">
-  <div class="footerArrow">
+<div class="footerContainer" [class.footerContainer--noArrow]="!showArrow()">
+  @if (showArrow()) {
+    <div class="footerArrow">
       <a href="#hero" aria-label="Zum Anfang der Seite">
         <img src="/assets/icons/project/arrowFooter.svg" alt="">
       </a>
-  </div>
+    </div>
+  }
   <div class="footerBrand">
       <img src="/assets/logo/logoWhite.png" alt="Logo">
       <span>© Michel Korfmacher 2026</span>
-  </div>
+    </div>
   <div class="footerSocials">
       <a href=""><img src="/assets/icons/social/githubButton.svg" alt="Git Hub"></a>
       <a href=""><img src="/assets/icons/social/emailButton.svg" alt="e-mail"></a>
       <a href=""><img src="/assets/icons/social/linkedinButton.svg" alt="LinkedIn"></a>
   </div>
-  <div class="footerLegal"><a href="">Legal notice</a></div>
+  <div class="footerLegal">
+    <a href="/legal-notice" (click)="onLegalClick($event)">Legal notice</a>
+  </div>
 </div>

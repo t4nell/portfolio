@@ -111,23 +111,5 @@
     min-width: 23px;
     padding: 3px;
     font-size: 11px;
-  }
-
-  .menu-button {
-    width: 32px;
-    height: 32px;
-    padding: 6px 2px;
-  }
-
-  .menu-button span {
-    height: 2px;
-  }
-
-  .menu-button--open span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-
-  .menu-button--open span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
+  } 
 }

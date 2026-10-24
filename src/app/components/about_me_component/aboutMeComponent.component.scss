@@ -47,11 +47,14 @@ h2 {
   max-width: 620px;
 }
 
-.portraitPlaceholder {
+.portrait {
+  display: block;
   width: 100%;
   max-width: 530px;
   aspect-ratio: 1;
-  background-color: #ce0000;
+  object-fit: cover;
+  border: var(--border-width) solid var(--color-text);
+  box-sizing: border-box;
 }
 
 .buttonContainer {
