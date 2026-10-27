@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input, output } from '@angular/core';
+import { LanguageService } from '../../core/language/language.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,7 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
 export class Footer {
   readonly showArrow = input(true);
   readonly legalClick = output<void>();
+  readonly lang = inject(LanguageService);
 
   onLegalClick(event: Event): void {
     event.preventDefault();

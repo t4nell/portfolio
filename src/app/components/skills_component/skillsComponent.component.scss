@@ -147,12 +147,28 @@
 
   a {
     position: relative;
-    display: inline-block;
+    display: inline-grid;
+    vertical-align: bottom;
     color: var(--color-accent);
-    font-weight: 400;
-    transition: font-weight var(--transition);
 
-    &:hover {
+    .contactMeText,
+    .contactMeMeasure {
+      grid-area: 1 / 1;
+    }
+
+    .contactMeText {
+      font-weight: 400;
+      transition: font-weight var(--transition);
+    }
+
+    .contactMeMeasure {
+      font-weight: 700;
+      visibility: hidden;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    &:hover .contactMeText {
       font-weight: 700;
     }
 

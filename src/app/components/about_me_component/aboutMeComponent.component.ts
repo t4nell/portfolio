@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/language/language.service';
 
 @Component({
   selector: 'app-about-me-component',
@@ -7,4 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { id: 'about' }
 })
-export class AboutMeComponent {}
+export class AboutMeComponent {
+  readonly lang = inject(LanguageService);
+}

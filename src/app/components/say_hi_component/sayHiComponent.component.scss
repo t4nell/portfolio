@@ -65,10 +65,18 @@ textarea.formField {
 
 .privacyLabel {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-xs);
   font-size: 14px;
   cursor: pointer;
+
+  &:hover .privacyCheckbox {
+    background-color: var(--color-accent);
+  }
+
+  &:hover .privacyCheckbox::before {
+    background-color: var(--color-surface-dark);
+  }
 }
 
 .privacyCheckbox {
@@ -82,6 +90,7 @@ textarea.formField {
   cursor: pointer;
   display: grid;
   place-content: center;
+  transition: background-color var(--transition);
 
   &::before {
     content: '';
@@ -90,7 +99,15 @@ textarea.formField {
     background-color: var(--color-accent);
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
     transform: scale(0);
-    transition: transform var(--transition);
+    transition: transform var(--transition), background-color var(--transition);
+  }
+
+  &:hover {
+    background-color: var(--color-accent);
+  }
+
+  &:hover::before {
+    background-color: var(--color-surface-dark);
   }
 
   &:checked::before {
@@ -99,7 +116,31 @@ textarea.formField {
 }
 
 .privacyLink {
+  display: inline-grid;
+  vertical-align: bottom;
   color: var(--color-accent);
+  text-align: center;
+
+  .privacyLinkText,
+  .privacyLinkMeasure {
+    grid-area: 1 / 1;
+  }
+
+  .privacyLinkText {
+    font-weight: 400;
+    transition: font-weight var(--transition);
+  }
+
+  .privacyLinkMeasure {
+    font-weight: 800;
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &:hover .privacyLinkText {
+    font-weight: 800;
+  }
 }
 
 .sendButton {
@@ -127,6 +168,11 @@ textarea.formField {
 }
 
 @media (max-width: 1000px) {
+  h2 {
+    padding-left: 0;
+    text-align: center;
+  }
+
   .sendButtonDesktop {
     display: none;
   }
@@ -137,6 +183,7 @@ textarea.formField {
 }
 
 @media (max-width: 600px) {
+
   .sayHiMessage {
     font-size: 20px;
   }

@@ -1,7 +1,7 @@
 <div class="footerContainer" [class.footerContainer--noArrow]="!showArrow()">
   @if (showArrow()) {
     <div class="footerArrow">
-      <a href="#hero" aria-label="Zum Anfang der Seite">
+      <a href="#hero" [attr.aria-label]="lang.t().footer.backToTop">
         <img src="/assets/icons/project/arrowFooter.svg" alt="">
       </a>
     </div>
@@ -16,6 +16,6 @@
       <a href=""><img src="/assets/icons/social/linkedinButton.svg" alt="LinkedIn"></a>
   </div>
   <div class="footerLegal">
-    <a href="/legal-notice" (click)="onLegalClick($event)">Legal notice</a>
+    <a href="/legal-notice" (click)="onLegalClick($event)">{{ lang.t().footer.legal }}</a>
   </div>
 </div>

@@ -1,6 +1,11 @@
 <header class="header">
   <div class="header__inner content-limit">
-    <a class="header__logo-link" href="#hero" aria-label="Zur Startseite" (click)="onLogoClick($event)">
+    <a
+      class="header__logo-link"
+      href="#hero"
+      [attr.aria-label]="lang.t().header.homeAria"
+      (click)="onLogoClick($event)"
+    >
       <img
         class="header__logo"
         ngSrc="/assets/logo/logoBlack.png"
@@ -12,11 +17,23 @@
     </a>
 
     <div class="header__actions">
-      <div class="language-switch" aria-label="Sprache auswählen">
-        <button class="language-switch__option language-switch__option--active" type="button" aria-pressed="true">
+      <div class="language-switch" [attr.aria-label]="lang.t().header.langAria">
+        <button
+          class="language-switch__option"
+          [class.language-switch__option--active]="lang.lang() === 'en'"
+          type="button"
+          [attr.aria-pressed]="lang.lang() === 'en'"
+          (click)="setLang('en')"
+        >
           EN
         </button>
-        <button class="language-switch__option" type="button" aria-pressed="false">
+        <button
+          class="language-switch__option"
+          [class.language-switch__option--active]="lang.lang() === 'de'"
+          type="button"
+          [attr.aria-pressed]="lang.lang() === 'de'"
+          (click)="setLang('de')"
+        >
           DE
         </button>
       </div>
@@ -25,7 +42,7 @@
         class="menu-button"
         [class.menu-button--open]="menuOpen()"
         type="button"
-        [attr.aria-label]="menuOpen() ? 'Menü schließen' : 'Menü öffnen'"
+        [attr.aria-label]="menuOpen() ? lang.t().header.menuClose : lang.t().header.menuOpen"
         [attr.aria-expanded]="menuOpen()"
         (click)="menuToggle.emit()"
       >

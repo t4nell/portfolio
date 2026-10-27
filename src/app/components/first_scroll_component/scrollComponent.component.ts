@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { LanguageService } from '../../core/language/language.service';
 
 export type ScrollDirection = 'down' | 'up' | 'left' | 'right';
 
@@ -11,4 +12,5 @@ export type ScrollDirection = 'down' | 'up' | 'left' | 'right';
 export class ScrollComponent {
   readonly direction = input<ScrollDirection>('down');
   readonly email = input('michelkorfmacher@yahoo.de');
+  readonly lang = inject(LanguageService);
 }

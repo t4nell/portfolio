@@ -5,7 +5,9 @@
 }
 
 @if (legalOpen()) {
-  <app-legal-notice />
+  <app-legal-notice (backClick)="goToHero()" />
+} @else if (privacyOpen()) {
+  <app-privacy-policy (backClick)="goToHero()" (legalClick)="openLegal()" />
 } @else {
   <app-hero-component />
   <app-about-me-component />
@@ -15,7 +17,7 @@
   <app-portfolio-component />
   <app-references-component />
   <app-section-transition-component direction="down-left" class="lastTransition"/>
-  <app-say-hi-component (legalClick)="openLegal()" />
+  <app-say-hi-component (legalClick)="openLegal()" (privacyClick)="openPrivacy()" />
 }
 
 <router-outlet />

@@ -1,15 +1,15 @@
 <div class="menuContainer">
   <div class="menuLinks">
     <div class="menuLinksInner">
-      <a href="#about" (click)="onNavigate($event, 'about')">About me</a>
-      <a href="#skills" (click)="onNavigate($event, 'skills')">My skills</a>
-      <a href="#portfolio" (click)="onNavigate($event, 'portfolio')">Portfolio</a>
+      <a href="#about" (click)="onNavigate($event, 'about')">{{ lang.t().menu.about }}</a>
+      <a href="#skills" (click)="onNavigate($event, 'skills')">{{ lang.t().menu.skills }}</a>
+      <a href="#portfolio" (click)="onNavigate($event, 'portfolio')">{{ lang.t().menu.portfolio }}</a>
     </div>
   </div>
 
   <div class="menuContact">
     <div class="menuContactText">
-      <a href="#say-hi">Say Hi!</a>
+      <a href="#say-hi">{{ lang.t().menu.sayHi }}</a>
       <a href="mailto:michelkorfmacher@yahoo.de">michelkorfmacher@yahoo.de</a>
     </div>
 

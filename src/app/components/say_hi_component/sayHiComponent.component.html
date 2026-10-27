@@ -1,28 +1,49 @@
 <section class="sayHiSection" id="say-hi" aria-labelledby="sayHiTitle">
   <div class="content-limit sayHiInner">
-    <h2 id="sayHiTitle">Say Hi!</h2>
+    <h2 id="sayHiTitle">{{ lang.t().sayHi.title }}</h2>
 
     <div class="sayHiIntro">
-      <p class="sayHiQuestion">Want to discuss a new project?</p>
-      <p class="sayHiMessage">Say hello! let's discuss your ideas and make it happen</p>
+      <p class="sayHiQuestion">{{ lang.t().sayHi.question }}</p>
+      <p class="sayHiMessage">{{ lang.t().sayHi.message }}</p>
     </div>
 
     <form class="contactForm">
-      <input class="formField" type="text" name="name" placeholder="Your name" autocomplete="name">
-      <input class="formField" type="email" name="email" placeholder="Your email" autocomplete="email">
-      <textarea class="formField" name="message" placeholder="Your message" rows="5"></textarea>
+      <input
+        class="formField"
+        type="text"
+        name="name"
+        [placeholder]="lang.t().sayHi.placeholderName"
+        autocomplete="name"
+      >
+      <input
+        class="formField"
+        type="email"
+        name="email"
+        [placeholder]="lang.t().sayHi.placeholderEmail"
+        autocomplete="email"
+      >
+      <textarea
+        class="formField"
+        name="message"
+        [placeholder]="lang.t().sayHi.placeholderMessage"
+        rows="5"
+      ></textarea>
 
       <label class="privacyLabel">
         <input class="privacyCheckbox" type="checkbox" name="privacy">
         <span>
-          I've read the <a class="privacyLink" href="#">privacy policy</a>
-          and agree to the processing of my data as outlined.
+          {{ lang.t().sayHi.privacyBefore }}
+          <a class="privacyLink" href="/privacy-policy" (click)="onPrivacyClick($event)">
+            <span class="privacyLinkText">{{ lang.t().sayHi.privacyLink }}</span>
+            <span class="privacyLinkMeasure" aria-hidden="true">{{ lang.t().sayHi.privacyLink }}</span>
+          </a>
+          {{ lang.t().sayHi.privacyAfter }}
         </span>
       </label>
 
       <button class="sendButton" type="submit">
-        <span class="sendButtonDesktop">Send message</span>
-        <span class="sendButtonMobile">Say Hello ;)</span>
+        <span class="sendButtonDesktop">{{ lang.t().sayHi.sendDesktop }}</span>
+        <span class="sendButtonMobile">{{ lang.t().sayHi.sendMobile }}</span>
       </button>
     </form>
 

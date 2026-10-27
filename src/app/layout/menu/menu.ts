@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, output } from '@angular/core';
+import { LanguageService } from '../../core/language/language.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,6 +9,7 @@ import { ChangeDetectionStrategy, Component, output } from '@angular/core';
 })
 export class Menu {
   readonly navigate = output<string>();
+  readonly lang = inject(LanguageService);
 
   onNavigate(event: Event, sectionId: string): void {
     event.preventDefault();

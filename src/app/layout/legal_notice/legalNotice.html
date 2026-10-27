@@ -1,84 +1,70 @@
 <div class="legalPage">
   <section class="legalNotice content-limit" aria-labelledby="legalNoticeTitle">
-    <h1 id="legalNoticeTitle">Legal Notice</h1>
+    <button
+      class="backArrowContainer"
+      type="button"
+      [attr.aria-label]="lang.t().legal.backAria"
+      (click)="backClick.emit()"
+    >
+      <img src="/assets/icons/project/backArrow.svg" alt="" class="backArrow">
+    </button>
+    <h1 id="legalNoticeTitle">{{ lang.t().legal.title }}</h1>
 
     <div class="legalNoticeContent">
-      <h2 class="legalNoticeTitle">Imprint</h2>
+      <h2 class="legalNoticeTitle">{{ lang.t().legal.imprint }}</h2>
       <ul>
         <li>Michel Korfmacher</li>
         <li>Salinenstr. 8</li>
         <li>83435 Bad Reichenhall</li>
-        <li>Germany</li>
+        <li>{{ lang.t().legal.germany }}</li>
       </ul>
 
-      <h2>Exploring the Board</h2>
-      <p>Email: michelkorfmacher@yahoo.de</p>
+      <h2>{{ lang.t().legal.exploring }}</h2>
+      <p>{{ lang.t().legal.email }}</p>
 
-      <h2>Acceptance of terms</h2>
+      <h2>{{ lang.t().legal.acceptanceTitle }}</h2>
       <p>
-        By accessing and using
-        <span class="legalAccent">Portfolio</span>,
-        you acknowledge and agree to comply with these Terms of Use. If you do
-        not agree with any part of these terms, you may not use this product.
+        {{ lang.t().legal.acceptanceTextBefore }}
+        <span class="legalAccent">Portfolio</span>{{ lang.t().legal.acceptanceTextAfter }}
       </p>
 
-      <h2>Scope and ownership of the product</h2>
+      <h2>{{ lang.t().legal.scopeTitle }}</h2>
       <p>
-        <span class="legalAccent">Portfolio</span>
-        has been developed as part of a student group project in a web development
-        bootcamp at the
-        <span class="legalAccent">Developer Akademie GmbH</span>.
-        It has an educational purpose and is not intended for extensive personal
-        &amp; business usage.
+        <span class="legalAccent">Portfolio</span>{{ lang.t().legal.scopeP1Mid }}
+        <span class="legalAccent">Developer Akademie GmbH</span>{{ lang.t().legal.scopeP1After }}
       </p>
       <p>
-        We are the sole owners of this product.
-        <span class="legalAccent">Developer Akademie GmbH</span>
-        remains the sole owner of any design template, design pattern and code
-        used for educational purposes.
+        {{ lang.t().legal.scopeP2Before }}
+        <span class="legalAccent">Developer Akademie GmbH</span>{{ lang.t().legal.scopeP2After }}
       </p>
 
-      <h2>Proprietary rights</h2>
+      <h2>{{ lang.t().legal.proprietaryTitle }}</h2>
       <p>
-        Aside from the underlying design patterns and code from
-        <span class="legalAccent">Developer Akademie GmbH</span>,
-        any proprietary product, design, branding and other intellectual property
-        related to
-        <span class="legalAccent">Portfolio</span>
-        remain the property of their respective student owners.
+        {{ lang.t().legal.proprietaryBefore }}
+        <span class="legalAccent">Developer Akademie GmbH</span>{{ lang.t().legal.proprietaryMid }}
+        <span class="legalAccent">Portfolio</span>{{ lang.t().legal.proprietaryAfter }}
       </p>
 
-      <h2>Use of the product</h2>
+      <h2>{{ lang.t().legal.useTitle }}</h2>
       <p>
-        <span class="legalAccent">Portfolio</span>
-        is intended to be used for lawful purposes only. You agree not to use it
-        in any way that violates applicable laws or regulations.
+        <span class="legalAccent">Portfolio</span>{{ lang.t().legal.useAfter }}
       </p>
 
-      <h2>Disclaimer of warranties and limitation of liability</h2>
+      <h2>{{ lang.t().legal.disclaimerTitle }}</h2>
       <p>
-        <span class="legalAccent">Portfolio</span>
-        is provided "as is", without warranties of any kind. In no event shall
-        the authors, the students or
-        <span class="legalAccent">Developer Akademie</span>
-        be liable for any claim, damages or other liability arising from the use
-        of this product.
+        <span class="legalAccent">Portfolio</span>{{ lang.t().legal.disclaimerMid }}
+        <span class="legalAccent">Developer Akademie</span>{{ lang.t().legal.disclaimerAfter }}
       </p>
 
-      <h2>Indemnify</h2>
+      <h2>{{ lang.t().legal.indemnifyTitle }}</h2>
       <p>
-        You agree to indemnify and hold the students and
-        <span class="legalAccent">Developer Akademie</span>
-        harmless from any claim or demand arising out of your use of
-        <span class="legalAccent">Portfolio</span>
-        or your violation of these Terms of Use.
+        {{ lang.t().legal.indemnifyBefore }}
+        <span class="legalAccent">Developer Akademie</span>{{ lang.t().legal.indemnifyMid }}
+        <span class="legalAccent">Portfolio</span>{{ lang.t().legal.indemnifyAfter }}
       </p>
 
-      <p class="legalContact">
-        For any questions or notices, please contact us at [michelkorfmacher@yahoo.de]
-      </p>
-
-      <p class="legalDate">Date: October 26, 2026</p>
+      <p class="legalContact">{{ lang.t().legal.contact }}</p>
+      <p class="legalDate">{{ lang.t().legal.date }}</p>
     </div>
   </section>
 

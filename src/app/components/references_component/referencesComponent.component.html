@@ -1,16 +1,12 @@
 <div class="content-limit referencesLimit">
   <section class="referencesSection" aria-labelledby="referencesTitle">
     <div class="referencesHeading">
-      <h2 id="referencesTitle">References</h2>
-      <p class="referencesDescription">
-        I thrive both independently and as part of a team. Here's
-        <br>
-        what my colleagues have to say about working with me.
-      </p>
+      <h2 id="referencesTitle">{{ lang.t().references.title }}</h2>
+      <p class="referencesDescription">{{ lang.t().references.description }}</p>
     </div>
 
     <div class="referencesList">
-      @for (reference of references; track reference.name) {
+      @for (reference of references(); track reference.name) {
         <figure class="referenceCard">
           <span class="referenceQuoteIcon" aria-hidden="true">&#8221;</span>
           <figcaption>

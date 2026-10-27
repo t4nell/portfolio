@@ -10,6 +10,7 @@ import { SkillsComponent } from './components/skills_component/skillsComponent.c
 import { Header } from './layout/header/header';
 import { LegalNotice } from './layout/legal_notice/legalNotice';
 import { Menu } from './layout/menu/menu';
+import { PrivacyPolicy } from './layout/privacy_policy/privacyPolicy';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { Menu } from './layout/menu/menu';
     Header,
     Menu,
     LegalNotice,
+    PrivacyPolicy,
     HeroComponent,
     AboutMeComponent,
     SectionTransitionComponent,
@@ -33,6 +35,7 @@ import { Menu } from './layout/menu/menu';
 export class App {
   readonly menuOpen = signal(false);
   readonly legalOpen = signal(false);
+  readonly privacyOpen = signal(false);
 
   toggleMenu(): void {
     this.menuOpen.update((isOpen) => !isOpen);
@@ -41,7 +44,16 @@ export class App {
 
   openLegal(): void {
     this.menuOpen.set(false);
+    this.privacyOpen.set(false);
     this.legalOpen.set(true);
+    this.syncBodyScroll();
+    window.scrollTo({ top: 0 });
+  }
+
+  openPrivacy(): void {
+    this.menuOpen.set(false);
+    this.legalOpen.set(false);
+    this.privacyOpen.set(true);
     this.syncBodyScroll();
     window.scrollTo({ top: 0 });
   }
@@ -49,6 +61,7 @@ export class App {
   goToHero(): void {
     this.menuOpen.set(false);
     this.legalOpen.set(false);
+    this.privacyOpen.set(false);
     this.syncBodyScroll();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -56,6 +69,7 @@ export class App {
   goToSection(sectionId: string): void {
     this.menuOpen.set(false);
     this.legalOpen.set(false);
+    this.privacyOpen.set(false);
     this.syncBodyScroll();
     document.getElementById(sectionId)?.scrollIntoView({
       behavior: 'smooth',

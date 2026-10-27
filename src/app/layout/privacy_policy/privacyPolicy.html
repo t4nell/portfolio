@@ -1,0 +1,73 @@
+<div class="privacyPage">
+  <section class="privacyPolicy content-limit" aria-labelledby="privacyPolicyTitle">
+    <button
+      class="backArrowContainer"
+      type="button"
+      [attr.aria-label]="lang.t().privacy.backAria"
+      (click)="backClick.emit()"
+    >
+      <img src="/assets/icons/project/backArrow.svg" alt="" class="backArrow">
+    </button>
+    <h1 id="privacyPolicyTitle">{{ lang.t().privacy.title }}</h1>
+
+    <div class="privacyPolicyContent">
+      <h2 class="privacyPolicySubtitle">{{ lang.t().privacy.controllerTitle }}</h2>
+      <p>{{ lang.t().privacy.controllerIntro }}</p>
+      <ul>
+        <li>Michel Korfmacher</li>
+        <li>Salinenstr. 8</li>
+        <li>83435 Bad Reichenhall</li>
+        <li>{{ lang.t().privacy.germany }}</li>
+      </ul>
+      <p>
+        {{ lang.t().privacy.emailLabel }}
+        <a class="privacyAccent" href="mailto:michelkorfmacher@yahoo.de">michelkorfmacher@yahoo.de</a>
+      </p>
+
+      <h2>{{ lang.t().privacy.hostingTitle }}</h2>
+      <p>
+        {{ lang.t().privacy.hostingP1Before }}
+        <span class="privacyAccent">ALL-INKL.COM</span>{{ lang.t().privacy.hostingP1After }}
+      </p>
+      <p>{{ lang.t().privacy.hostingP2 }}</p>
+
+      <h2>{{ lang.t().privacy.contactTitle }}</h2>
+      <p>{{ lang.t().privacy.contactP1 }}</p>
+      <p>
+        {{ lang.t().privacy.contactP2Before }}
+        <span class="privacyAccent">Yahoo</span>{{ lang.t().privacy.contactP2After }}
+      </p>
+      <p>{{ lang.t().privacy.contactP3 }}</p>
+      <p>{{ lang.t().privacy.contactP4 }}</p>
+
+      <h2>{{ lang.t().privacy.cookiesTitle }}</h2>
+      <p>{{ lang.t().privacy.cookiesText }}</p>
+
+      <h2>{{ lang.t().privacy.sslTitle }}</h2>
+      <p>{{ lang.t().privacy.sslText }}</p>
+
+      <h2>{{ lang.t().privacy.rightsTitle }}</h2>
+      <p>{{ lang.t().privacy.rightsIntro }}</p>
+      <ul>
+        @for (right of lang.t().privacy.rights; track right) {
+          <li>{{ right }}</li>
+        }
+      </ul>
+      <p>
+        {{ lang.t().privacy.rightsContactBefore }}
+        <a class="privacyAccent" href="mailto:michelkorfmacher@yahoo.de">michelkorfmacher@yahoo.de</a>.
+      </p>
+
+      <h2>{{ lang.t().privacy.changesTitle }}</h2>
+      <p>{{ lang.t().privacy.changesText }}</p>
+
+      <p class="privacyDate">{{ lang.t().privacy.date }}</p>
+    </div>
+  </section>
+
+  <div class="privacyFooter">
+    <div class="content-limit privacyFooterInner">
+      <app-footer [showArrow]="false" (legalClick)="legalClick.emit()" />
+    </div>
+  </div>
+</div>

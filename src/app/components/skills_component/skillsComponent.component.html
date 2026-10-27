@@ -1,6 +1,6 @@
 <div class="content-limit skillsLimit">
   <section class="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title" class="skillsTitle">My skills</h2>
+      <h2 id="skills-title" class="skillsTitle">{{ lang.t().skills.title }}</h2>
 
       <div class="skillsContent">
           <div class="skillsContainer">
@@ -49,7 +49,12 @@
           <div class="skillsAndContact">
               <img src="/assets/icons/skills/learnLogo.svg" alt="Learn logo">
               <span>
-                  Don't see the skill you need? <a href="">Contact me</a> I'm always ready to learn!
+                  {{ lang.t().skills.contactBefore }}
+                  <a href="#say-hi">
+                    <span class="contactMeText">{{ lang.t().skills.contactLink }}</span>
+                    <span class="contactMeMeasure" aria-hidden="true">{{ lang.t().skills.contactLink }}</span>
+                  </a>
+                  {{ lang.t().skills.contactAfter }}
               </span>
           </div>
       </div>

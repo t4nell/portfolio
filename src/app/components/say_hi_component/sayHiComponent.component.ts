@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, output } from '@angular/core';
 import { Footer } from '../../layout/footer/footer';
+import { LanguageService } from '../../core/language/language.service';
 
 @Component({
   selector: 'app-say-hi-component',
@@ -10,4 +11,11 @@ import { Footer } from '../../layout/footer/footer';
 })
 export class SayHiComponent {
   readonly legalClick = output<void>();
+  readonly privacyClick = output<void>();
+  readonly lang = inject(LanguageService);
+
+  onPrivacyClick(event: Event): void {
+    event.preventDefault();
+    this.privacyClick.emit();
+  }
 }

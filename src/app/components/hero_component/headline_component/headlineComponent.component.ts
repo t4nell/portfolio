@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LanguageService } from '../../../core/language/language.service';
 
 @Component({
   selector: 'app-headline-component',
@@ -6,4 +7,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './headlineComponent.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeadlineComponent {}
+export class HeadlineComponent {
+  readonly lang = inject(LanguageService);
+}

@@ -1,20 +1,24 @@
 <div class="content-limit portfolioLimit">
   <section class="portfolioSection" aria-labelledby="portfolioTitle">
     <div class="portfolioHeading">
-      <h2 id="portfolioTitle">Portfolio</h2>
-      <p class="portfolioDescription">
-          Explore a selection of my work here - interact with
-          <br>
-          projects to see my skills in action.
-      </p>
+      <h2 id="portfolioTitle">{{ lang.t().portfolio.title }}</h2>
+      <p class="portfolioDescription">{{ lang.t().portfolio.description }}</p>
     </div>
 
     <div class="portfolioList">
-      @for (project of projects; track project.name; let i = $index, odd = $odd) {
+      @for (project of projects(); track project.name; let i = $index, odd = $odd) {
         <article class="projectCard" [class.projectCardImageRight]="odd">
           <div class="projectLink">
-            <a class="projectPreview" [href]="project.link" [attr.aria-label]="project.name + ' öffnen'">
-              <img class="projectImage" [src]="project.image" [alt]="'Vorschau von ' + project.name">
+            <a
+              class="projectPreview"
+              [href]="project.link"
+              [attr.aria-label]="project.name + ' ' + lang.t().portfolio.openAria"
+            >
+              <img
+                class="projectImage"
+                [src]="project.image"
+                [alt]="lang.t().portfolio.previewAlt + ' ' + project.name"
+              >
               <span class="projectArrow" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
                   <path d="M12 4v16" transform="translate(0 -1)" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
@@ -35,7 +39,7 @@
                   [href]="project.github"
                   target="_blank"
                   rel="noopener noreferrer"
-                >Github</a>
+                >{{ lang.t().portfolio.github }}</a>
               </div>
             </div>
           </div>

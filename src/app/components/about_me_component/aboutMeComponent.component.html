@@ -1,29 +1,23 @@
 <div class="content-limit aboutMeContent">
   <div class="aboutMeTextContainer">
-    
+
     <div>
         <div>
-            <h2>About me</h2>
+            <h2>{{ lang.t().about.title }}</h2>
         </div>
-        <span>
-            Career change, self-taught energy, and a lot of late nights at the Developer Akademie.
-            That's how I got here. Frontend felt like the right first step: I could see what I was
-            building, and I could improve it right away. I learn fast, and my next step is a junior
-            frontend role, with fullstack as the longer goal. If you need someone curious, reliable,
-            and easy to work with, that's me.
-        </span>
+        <span>{{ lang.t().about.text }}</span>
     </div>
     <div class="aboutMeFacts">
         <div class="factItem">
-            <img src="/assets/icons/project/house.svg" alt="house">
-            <span>Based in Bad Reichenhall</span>
+            <img src="/assets/icons/project/house.svg" alt="">
+            <span>{{ lang.t().about.basedIn }}</span>
         </div>
         <div class="factItem">
-            <img src="/assets/icons/project/laptop.svg" alt="Laptop">
-            <span>Open to work Remote</span>
+            <img src="/assets/icons/project/laptop.svg" alt="">
+            <span>{{ lang.t().about.openToWork }}</span>
         </div>
         <div class="buttonContainer">
-            <a class="talkButton" href="#say-hi">Let's talk</a>
+            <a class="talkButton" href="#say-hi">{{ lang.t().about.letsTalk }}</a>
         </div>
     </div>
 

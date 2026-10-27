@@ -57,8 +57,16 @@
   min-width: 27px;
   padding: 3px 5px;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
+  text-decoration: none;
+  transition: text-decoration-color var(--transition);
+
+  &:not(.language-switch__option--active):hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
 }
 
 .language-switch__option--active {
@@ -110,6 +118,5 @@
   .language-switch__option {
     min-width: 23px;
     padding: 3px;
-    font-size: 11px;
-  } 
+  }
 }
