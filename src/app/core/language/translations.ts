@@ -49,6 +49,10 @@ export interface Translations {
     privacyAfter: string;
     sendDesktop: string;
     sendMobile: string;
+    errorName: string;
+    errorEmail: string;
+    errorMessage: string;
+    errorPrivacy: string;
   };
   menu: {
     about: string;
@@ -174,7 +178,11 @@ export const translations: Record<Lang, Translations> = {
       privacyLink: 'privacy policy',
       privacyAfter: ' and agree to the processing of my data as outlined.',
       sendDesktop: 'Send message',
-      sendMobile: 'Say Hello ;)'
+      sendMobile: 'Say Hello ;)',
+      errorName: 'Please enter your name.',
+      errorEmail: 'Please enter a valid email address.',
+      errorMessage: 'Please enter your message.',
+      errorPrivacy: 'Please accept the privacy policy.'
     },
     menu: {
       about: 'About me',
@@ -301,7 +309,7 @@ export const translations: Record<Lang, Translations> = {
     portfolio: {
       title: 'Portfolio',
       description:
-        'Entdecke hier eine Auswahl meiner Arbeiten – interagiere mit den Projekten und sieh meine Skills in Aktion.',
+        'Entdecke hier eine Auswahl meiner Arbeiten - interagiere mit den Projekten und sieh meine Skills in Aktion.',
       openAria: 'Öffnen',
       previewAlt: 'Vorschau von',
       github: 'Github'
@@ -322,7 +330,11 @@ export const translations: Record<Lang, Translations> = {
       privacyLink: 'Datenschutzerklärung',
       privacyAfter: ' gelesen und stimme der beschriebenen Datenverarbeitung zu.',
       sendDesktop: 'Nachricht senden',
-      sendMobile: 'Sag Hallo ;)'
+      sendMobile: 'Sag Hallo ;)',
+      errorName: 'Bitte gib deinen Namen ein.',
+      errorEmail: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+      errorMessage: 'Bitte gib deine Nachricht ein.',
+      errorPrivacy: 'Bitte akzeptiere die Datenschutzerklärung.'
     },
     menu: {
       about: 'Über mich',

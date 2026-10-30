@@ -11,9 +11,15 @@
       <span>© Michel Korfmacher 2026</span>
     </div>
   <div class="footerSocials">
-      <a href=""><img src="/assets/icons/social/githubButton.svg" alt="Git Hub"></a>
-      <a href=""><img src="/assets/icons/social/emailButton.svg" alt="e-mail"></a>
-      <a href=""><img src="/assets/icons/social/linkedinButton.svg" alt="LinkedIn"></a>
+      <a [href]="socials.github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <img src="/assets/icons/social/githubButton.svg" alt="Git Hub">
+      </a>
+      <a [href]="socials.email" aria-label="E-Mail">
+        <img src="/assets/icons/social/emailButton.svg" alt="e-mail">
+      </a>
+      <a [href]="socials.linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="/assets/icons/social/linkedinButton.svg" alt="LinkedIn">
+      </a>
   </div>
   <div class="footerLegal">
     <a href="/legal-notice" (click)="onLegalClick($event)">{{ lang.t().footer.legal }}</a>

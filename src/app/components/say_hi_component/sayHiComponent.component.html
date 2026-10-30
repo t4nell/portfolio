@@ -8,40 +8,86 @@
     </div>
 
     <form class="contactForm">
-      <input
-        class="formField"
-        type="text"
-        name="name"
-        [placeholder]="lang.t().sayHi.placeholderName"
-        autocomplete="name"
-      >
-      <input
-        class="formField"
-        type="email"
-        name="email"
-        [placeholder]="lang.t().sayHi.placeholderEmail"
-        autocomplete="email"
-      >
-      <textarea
-        class="formField"
-        name="message"
-        [placeholder]="lang.t().sayHi.placeholderMessage"
-        rows="5"
-      ></textarea>
+      <div class="formGroup">
+        <input
+          class="formField"
+          type="text"
+          name="name"
+          [placeholder]="lang.t().sayHi.placeholderName"
+          autocomplete="name"
+          [value]="name()"
+          [attr.aria-invalid]="showNameError()"
+          (input)="onNameInput($event)"
+          (blur)="onNameBlur()"
+        >
+        <p class="formError" [class.formError--visible]="showNameError()">
+          {{ showNameError() ? lang.t().sayHi.errorName : '' }}
+        </p>
+      </div>
 
-      <label class="privacyLabel">
-        <input class="privacyCheckbox" type="checkbox" name="privacy">
-        <span>
-          {{ lang.t().sayHi.privacyBefore }}
-          <a class="privacyLink" href="/privacy-policy" (click)="onPrivacyClick($event)">
-            <span class="privacyLinkText">{{ lang.t().sayHi.privacyLink }}</span>
-            <span class="privacyLinkMeasure" aria-hidden="true">{{ lang.t().sayHi.privacyLink }}</span>
-          </a>
-          {{ lang.t().sayHi.privacyAfter }}
-        </span>
-      </label>
+      <div class="formGroup">
+        <input
+          class="formField"
+          type="email"
+          name="email"
+          [placeholder]="lang.t().sayHi.placeholderEmail"
+          autocomplete="email"
+          [value]="email()"
+          [attr.aria-invalid]="showEmailError()"
+          (input)="onEmailInput($event)"
+          (blur)="onEmailBlur()"
+        >
+        <p class="formError" [class.formError--visible]="showEmailError()">
+          {{ showEmailError() ? lang.t().sayHi.errorEmail : '' }}
+        </p>
+      </div>
 
-      <button class="sendButton" type="submit">
+      <div class="formGroup">
+        <textarea
+          class="formField"
+          name="message"
+          [placeholder]="lang.t().sayHi.placeholderMessage"
+          rows="5"
+          [value]="message()"
+          [attr.aria-invalid]="showMessageError()"
+          (input)="onMessageInput($event)"
+          (blur)="onMessageBlur()"
+        ></textarea>
+        <p class="formError" [class.formError--visible]="showMessageError()">
+          {{ showMessageError() ? lang.t().sayHi.errorMessage : '' }}
+        </p>
+      </div>
+
+      <div class="formGroup">
+        <label class="privacyLabel">
+          <input
+            class="privacyCheckbox"
+            type="checkbox"
+            name="privacy"
+            [checked]="privacyAccepted()"
+            [attr.aria-invalid]="showPrivacyError()"
+            (change)="onPrivacyChange($event)"
+            (blur)="onPrivacyBlur()"
+          >
+          <span>
+            {{ lang.t().sayHi.privacyBefore }}
+            <a class="privacyLink" href="/privacy-policy" (click)="onPrivacyClick($event)">
+              <span class="privacyLinkText">{{ lang.t().sayHi.privacyLink }}</span>
+              <span class="privacyLinkMeasure" aria-hidden="true">{{ lang.t().sayHi.privacyLink }}</span>
+            </a>
+            {{ lang.t().sayHi.privacyAfter }}
+          </span>
+        </label>
+        <p class="formError" [class.formError--visible]="showPrivacyError()">
+          {{ showPrivacyError() ? lang.t().sayHi.errorPrivacy : '' }}
+        </p>
+      </div>
+
+      <button
+        class="sendButton"
+        type="submit"
+        [disabled]="!canSubmit()"
+      >
         <span class="sendButtonDesktop">{{ lang.t().sayHi.sendDesktop }}</span>
         <span class="sendButtonMobile">{{ lang.t().sayHi.sendMobile }}</span>
       </button>

@@ -10,17 +10,17 @@
   <div class="menuContact">
     <div class="menuContactText">
       <a href="#say-hi">{{ lang.t().menu.sayHi }}</a>
-      <a href="mailto:michelkorfmacher@yahoo.de">michelkorfmacher@yahoo.de</a>
+      <a [href]="socials.email">michelkorfmacher@yahoo.de</a>
     </div>
 
     <div class="menuSocials">
-      <a href="" aria-label="GitHub">
+      <a [href]="socials.github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <img src="/assets/icons/social/githubButton.svg" alt="">
       </a>
-      <a href="mailto:michelkorfmacher@yahoo.de" aria-label="E-Mail">
+      <a [href]="socials.email" aria-label="E-Mail">
         <img src="/assets/icons/social/emailButton.svg" alt="">
       </a>
-      <a href="" aria-label="LinkedIn">
+      <a [href]="socials.linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <img src="/assets/icons/social/linkedinButton.svg" alt="">
       </a>
     </div>
