@@ -30,18 +30,18 @@ export class PortfolioComponent {
         de: 'Umfrage-App zum Erstellen und Ausfüllen von Polls. Umfragen durchstöbern, \nFragen mit Antwortoptionen hinzufügen und Antworten \nin einer Supabase-Datenbank speichern.'
       },
       image: '/assets/images/pollApp.png',
-      link: '#',
+      link: 'https://pollapp.michel-korfmacher.de',
       github: 'https://github.com/t4nell/pollapp'
     },
     {
-      name: 'Sucublood',
+      name: 'Succublood',
       skills: 'Figma | JavaScript | HTML | CSS | OOP | Canvas',
       description: {
         en: 'Jump-and-run browser game built with the Canvas API. \nFight demons, collect items and defeat the end boss \nusing melee and ranged attacks.',
         de: 'Jump-and-Run-Browserspiel mit der Canvas API. \nBekämpfe Dämonen, sammle Items und besiege den Endboss \nmit Nah- und Fernkampf.'
       },
       image: '/assets/images/succblood.png',
-      link: '#',
+      link: 'https://succublood.michel-korfmacher.de',
       github: 'https://github.com/t4nell/Succublood'
     },
     {
@@ -52,7 +52,7 @@ export class PortfolioComponent {
         de: 'Task-Manager inspiriert vom Kanban-System. \nErstelle und organisiere Aufgaben per Drag and Drop, \nweise Nutzer und Kategorien zu.'
       },
       image: '/assets/images/join.png',
-      link: '#',
+      link: 'https://join.michel-korfmacher.de',
       github: 'https://github.com/t4nell/Join-455'
     },
     {
@@ -63,7 +63,7 @@ export class PortfolioComponent {
         de: 'Pokémon-Enzyklopädie auf Basis der PokeAPI. \nDurchsuche den Katalog, sieh Typen und Stats an und \nöffne detaillierte Profile für jedes Pokémon.'
       },
       image: '/assets/images/pokemox.png',
-      link: '#',
+      link: 'https://pokedex.michel-korfmacher.de',
       github: 'https://github.com/t4nell/Pokedex'
     }
   ];

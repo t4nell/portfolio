@@ -7,7 +7,7 @@
       <p class="sayHiMessage">{{ lang.t().sayHi.message }}</p>
     </div>
 
-    <form class="contactForm">
+    <form class="contactForm" (submit)="onSubmit($event)">
       <div class="formGroup">
         <input
           class="formField"
@@ -91,6 +91,13 @@
         <span class="sendButtonDesktop">{{ lang.t().sayHi.sendDesktop }}</span>
         <span class="sendButtonMobile">{{ lang.t().sayHi.sendMobile }}</span>
       </button>
+
+      <p class="formFeedback formFeedback--success" [class.formFeedback--visible]="sendSuccess()">
+        {{ sendSuccess() ? lang.t().sayHi.successSend : '' }}
+      </p>
+      <p class="formFeedback formFeedback--error" [class.formFeedback--visible]="sendError()">
+        {{ sendError() ? lang.t().sayHi.errorSend : '' }}
+      </p>
     </form>
 
     <app-footer (legalClick)="legalClick.emit()" />

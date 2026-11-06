@@ -53,6 +53,8 @@ export interface Translations {
     errorEmail: string;
     errorMessage: string;
     errorPrivacy: string;
+    successSend: string;
+    errorSend: string;
   };
   menu: {
     about: string;
@@ -182,7 +184,9 @@ export const translations: Record<Lang, Translations> = {
       errorName: 'Please enter your name.',
       errorEmail: 'Please enter a valid email address.',
       errorMessage: 'Please enter your message.',
-      errorPrivacy: 'Please accept the privacy policy.'
+      errorPrivacy: 'Please accept the privacy policy.',
+      successSend: 'Thanks! Your message has been sent.',
+      errorSend: 'Something went wrong. Please try again later.'
     },
     menu: {
       about: 'About me',
@@ -334,7 +338,9 @@ export const translations: Record<Lang, Translations> = {
       errorName: 'Bitte gib deinen Namen ein.',
       errorEmail: 'Bitte gib eine gültige E-Mail-Adresse ein.',
       errorMessage: 'Bitte gib deine Nachricht ein.',
-      errorPrivacy: 'Bitte akzeptiere die Datenschutzerklärung.'
+      errorPrivacy: 'Bitte akzeptiere die Datenschutzerklärung.',
+      successSend: 'Danke! Deine Nachricht wurde gesendet.',
+      errorSend: 'Etwas ist schiefgelaufen. Bitte versuche es später erneut.'
     },
     menu: {
       about: 'Über mich',
