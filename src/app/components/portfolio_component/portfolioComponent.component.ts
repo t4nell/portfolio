@@ -56,15 +56,15 @@ export class PortfolioComponent {
       github: 'https://github.com/t4nell/Join-455'
     },
     {
-      name: 'Pokedex',
+      name: 'Pokemox',
       skills: 'Figma | Rest-API | JavaScript | HTML | CSS',
       description: {
         en: 'Pokémon encyclopedia powered by the PokeAPI. \nBrowse the catalog, inspect types and stats and \nopen detailed profiles for each Pokémon.',
         de: 'Pokémon-Enzyklopädie auf Basis der PokeAPI. \nDurchsuche den Katalog, sieh Typen und Stats an und \nöffne detaillierte Profile für jedes Pokémon.'
       },
       image: '/assets/images/pokemox.png',
-      link: 'https://pokedex.michel-korfmacher.de',
-      github: 'https://github.com/t4nell/Pokedex'
+      link: 'https://pokemox.michel-korfmacher.de',
+      github: 'https://github.com/t4nell/Pokemox'
     }
   ];
 
