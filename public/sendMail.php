@@ -11,8 +11,9 @@ header("Content-Type: application/json; charset=utf-8");
 // Deine eigene Adresse in Zeile 15 setzen!
 // ------------------------------------------------------------
 
-// >>> DEINE EMAIL HIER EINTRAGEN <<<
-$siteEmail = "michelkorfmacher@yahoo.de";
+// Absender = Domain-Postfach (ALL-INKL), Empfänger = wohin die Kontaktmail soll
+$fromEmail = "kontakt@michel-korfmacher.de";
+$recipientEmail = "michelkorfmacher@yahoo.de";
 
 switch ($_SERVER['REQUEST_METHOD']) {
 
@@ -49,8 +50,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
         $safeMessage = nl2br(htmlspecialchars($userMessage, ENT_QUOTES, 'UTF-8'));
 
-        // Empfängeradresse (nutzt die oben definierte Mail)
-        $recipient = $siteEmail;
         $subject = 'Website Contact Form';
 
         $mailBody = "
@@ -64,17 +63,17 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $headers = [];
         $headers[] = 'MIME-Version: 1.0';
         $headers[] = 'Content-type: text/html; charset=utf-8';
-        $headers[] = 'From: Website Kontakt <' . $siteEmail . '>';
+        $headers[] = 'From: Website Kontakt <' . $fromEmail . '>';
         $headers[] = 'Reply-To: ' . $email;
-        $headers[] = 'Return-Path: ' . $siteEmail;
+        $headers[] = 'Return-Path: ' . $fromEmail;
 
         // Send mail
         $success = mail(
-            $recipient,
+            $recipientEmail,
             $subject,
             $mailBody,
             implode("\r\n", $headers),
-            '-f ' . $siteEmail
+            '-f ' . $fromEmail
         );
 
         if ($success) {
