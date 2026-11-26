@@ -30,7 +30,7 @@ export class ReferencesComponent {
       }
     },
     {
-      name: 'N. siewert',
+      name: 'N. Siewert',
       role: {
         en: 'Team Partner',
         de: 'Team-Partner'
@@ -41,9 +41,15 @@ export class ReferencesComponent {
       }
     },
     {
-      name: '',
-      role: { en: '', de: '' },
-      text: { en: '', de: '' }
+      name: 'E. Schirok',
+      role: {
+        en: 'Team Partner',
+        de: 'Team-Partner'
+      },
+      text: {
+        en: 'Working with Michél Korfmacher is always a great experience! Our collaboration is fun, productive, and full of variety. We work together towards clear goals while keeping a relaxed and positive atmosphere.',
+        de: 'Die Zusammenarbeit mit Michél Korfmacher ist immer eine tolle Erfahrung! Unsere Zusammenarbeit macht Spaß, ist produktiv und abwechslungsreich. Wir arbeiten gemeinsam auf klare Ziele hin und behalten dabei eine entspannte, positive Atmosphäre.'
+      }
     }
   ];
 

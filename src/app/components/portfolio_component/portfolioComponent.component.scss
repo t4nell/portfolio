@@ -248,6 +248,10 @@ h3 {
     transform: none;
     opacity: 1;
     padding: var(--spacing-md) 0 0;
+
+    > div {
+      padding: 0 8px 8px;
+    }
   }
 
   .projectCardImageRight .projectPreview,
